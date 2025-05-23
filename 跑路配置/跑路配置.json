@@ -1,0 +1,348 @@
+{
+    "fun_chest_stealer": {
+        "delay": 0,
+        "fun": "fun_chest_stealer",
+        "name": "快速拿物",
+        "value": false,
+        "id": 47
+    },
+    "fun_chest_aura": {
+        "distance": 6,
+        "fun": "fun_chest_aura",
+        "name": "自动开箱",
+        "value": false,
+        "id": 46
+    },
+    "fun_auto_eat": {
+        "fun": "fun_auto_eat",
+        "health": 10,
+        "name": "自动吃物",
+        "value": false,
+        "id": 48
+    },
+    "fun_auto_build": {
+        "force_place": true,
+        "fun": "fun_auto_build",
+        "name": "自动搭路",
+        "value": false,
+        "id": 13,
+        "offset": 2.5
+    },
+    "fun_invincible": {
+        "attack_hurt": true,
+        "fun": "fun_invincible",
+        "name": "单人无敌",
+        "value": false,
+        "id": 49,
+        "effect_hurt": true,
+        "forced_hurt": true
+    },
+    "fun_auto_destroy": {
+        "fun": "fun_auto_destroy",
+        "index": 2,
+        "mode": "matrix",
+        "name": "自动破坏",
+        "value": false,
+        "id": 14
+    },
+    "fun_click_destroy": {
+        "fun": "fun_click_destroy",
+        "index": 0,
+        "mode": "matrix",
+        "name": "点击破坏",
+        "value": false,
+        "id": 24,
+        "packet_mode": "vanilla"
+    },
+    "fun_auto_destroy_block": {
+        "distance": 7,
+        "fun": "fun_auto_destroy_block",
+        "name": "自动破坏方块",
+        "value": false,
+        "id": 15,
+        "index": 0,
+        "packet_mode": "vanilla"
+    },
+    "fun_no_fall": {
+        "fun": "fun_no_fall",
+        "name": "无摔落伤害",
+        "speed": 1,
+        "value": false,
+        "id": 44
+    },
+    "fun_abilities": {
+        "flySpeed": 0.10000000149011612,
+        "fun": "fun_abilities",
+        "name": "玩家能力",
+        "value": false,
+        "id": 1,
+        "walkSpeed": 0.10000000149011612
+    },
+    "fun_block_outline": {
+        "fun": "fun_block_outline",
+        "name": "方块轮廓",
+        "rainbow": true,
+        "value": false,
+        "id": 73
+    },
+    "fun_zoom": {
+        "fov": 120,
+        "fun": "fun_zoom",
+        "name": "放大镜",
+        "value": false,
+        "id": 57,
+        "modifier": 1
+    },
+    "fun_name_tags": {
+        "fun": "fun_name_tags",
+        "name": "名称渲染",
+        "show_name": true,
+        "value": false,
+        "id": 59,
+        "show_health": true,
+        "size": 2.990000009536743,
+        "color": -65536
+    },
+    "fun_chest_esp": {
+        "fun": "fun_chest_esp",
+        "name": "箱子渲染",
+        "rainbow": true,
+        "value": false,
+        "id": 60,
+        "show_name": true,
+        "show_distance": true,
+        "size": 2.990000009536743
+    },
+    "fun_block_render": {
+        "fun": "fun_block_render",
+        "name": "方块渲染",
+        "rainbow": true,
+        "value": false,
+        "id": 64,
+        "count": 50,
+        "distance": 50
+    },
+    "fun_hud_module": {
+        "fun": "fun_hud_module",
+        "name": "主界面模块",
+        "value": true,
+        "id": 41,
+        "show_armor": true,
+        "array_list": true,
+        "short_name": true,
+        "font": "ui",
+        "index": 2,
+        "alpha": 0,
+        "cycle_speed": 3,
+        "saturation": 1,
+        "array_offset_x": 5,
+        "array_offset_y": 5
+    },
+    "fun_xray": {
+        "fun": "fun_xray",
+        "name": "方块透视",
+        "regex:ore|ancient_debris": true,
+        "value": false,
+        "id": 67,
+        "regex:lava|water": true,
+        "regex:chest|shulker_box": true,
+        "regex:portal|amethyst_block|ancient_debris|command_block|repeating_command_block|chain_command_block|structure_block|deny|allow|bedrock|border_block": true
+    },
+    "fun_tracer": {
+        "fun": "fun_tracer",
+        "name": "实体追踪",
+        "rainbow": true,
+        "value": false,
+        "id": 74,
+        "line_width": 0.0010000000474974513,
+        "max_count": 50,
+        "max_distance": 100,
+        "color": -1
+    },
+    "fun_esp": {
+        "fun": "fun_esp",
+        "name": "ESP",
+        "rainbow": true,
+        "value": false,
+        "id": 75,
+        "line_width": 0.009999999776482582,
+        "max_count": 50,
+        "max_distance": 100,
+        "color": -1,
+        "index": 2,
+        "mode": "3d"
+    },
+    "fun_timer": {
+        "fun": "fun_timer",
+        "name": "游戏速度",
+        "speed": 20,
+        "value": false,
+        "id": 30
+    },
+    "fun_jump_high": {
+        "fun": "fun_jump_high",
+        "name": "高跳",
+        "val": 0.75,
+        "value": false,
+        "id": 32
+    },
+    "fun_anti_void": {
+        "fun": "fun_anti_void",
+        "name": "虚空回弹",
+        "speed": 1.2999999523162842,
+        "value": false,
+        "id": 12
+    },
+    "fun_auto_ladder": {
+        "fun": "fun_auto_ladder",
+        "name": "自动爬梯",
+        "speed": 0.6000000238418579,
+        "value": false,
+        "id": 53
+    },
+    "fun_auto_sprint": {
+        "fun": "fun_auto_sprint",
+        "name": "自动冲刺",
+        "speed": 0.30000001192092896,
+        "value": false,
+        "id": 20
+    },
+    "fun_air_sprint": {
+        "fun": "fun_air_sprint",
+        "move_speed": 1.100000023841858,
+        "name": "冲刺",
+        "value": false,
+        "id": 11,
+        "up_down_speed": 2
+    },
+    "fun_ride_flying": {
+        "fun": "fun_ride_flying",
+        "move_speed": 4,
+        "name": "坐骑飞行",
+        "value": false,
+        "id": 61,
+        "up_down_speed": 1.5
+    },
+    "fun_auto_clicker": {
+        "delay": 5,
+        "fun": "fun_auto_clicker",
+        "name": "自动点击",
+        "value": false,
+        "id": 76
+    },
+    "fun_lock_behind": {
+        "distance": 11.100000381469727,
+        "fun": "fun_lock_behind",
+        "name": "锁背",
+        "value": false,
+        "id": 34
+    },
+    "fun_surround_attack": {
+        "distance": 11.100000381469727,
+        "fun": "fun_surround_attack",
+        "name": "环绕攻击",
+        "value": false,
+        "id": 40,
+        "speed": 20
+    },
+    "fun_hitbox": {
+        "fun": "fun_hitbox",
+        "name": "碰撞箱",
+        "size": 6,
+        "value": false,
+        "id": 31
+    },
+    "fun_auto_weapons": {
+        "fun": "fun_auto_weapons",
+        "index": 0,
+        "mode": "hot",
+        "name": "自动选取武器",
+        "value": false,
+        "id": 19
+    },
+    "fun_auto_block": {
+        "fun": "fun_auto_block",
+        "index": 0,
+        "mode": "hot",
+        "name": "自动选取方块",
+        "value": false,
+        "id": 18
+    },
+    "fun_no_knockback": {
+        "fun": "fun_no_knockback",
+        "horizontal": 1,
+        "name": "抗击退",
+        "value": false,
+        "id": 36,
+        "vertical": 1
+    },
+    "fun_aimbot": {
+        "distance": 11.100000381469727,
+        "fun": "fun_aimbot",
+        "name": "自动瞄准",
+        "value": false,
+        "id": 9,
+        "input": true
+    },
+    "fun_killaura": {
+        "action": true,
+        "fun": "fun_killaura",
+        "name": "杀戮光环",
+        "value": false,
+        "id": 33,
+        "speed": 20,
+        "count": 3,
+        "distance": 7,
+        "cps_speed": 2147483647
+    },
+    "fun_auto_fishing": {
+        "delay": 3,
+        "fun": "fun_auto_fishing",
+        "name": "自动钓鱼",
+        "value": false,
+        "id": 52
+    },
+    "fun_chain_mining": {
+        "distance": 7,
+        "fun": "fun_chain_mining",
+        "name": "连锁挖掘",
+        "value": false,
+        "id": 51,
+        "search_distance": 10
+    },
+    "fun_fast_build": {
+        "fun": "fun_fast_build",
+        "index": 0,
+        "mode": "fill",
+        "name": "快速建造",
+        "value": false,
+        "id": 63,
+        "radius": 5,
+        "height": 10,
+        "distance": 6.5,
+        "retry": true,
+        "line_box": true
+    },
+    "fun_multiple_packet": {
+        "count": 50,
+        "fun": "fun_multiple_packet",
+        "name": "重复数据包",
+        "value": false,
+        "id": 35
+    },
+    "fun_crash_server": {
+        "count": 10000,
+        "fun": "fun_crash_server",
+        "name": "崩溃服务器",
+        "value": false,
+        "id": 68
+    },
+    "fun_sound_engine": {
+        "fun": "fun_sound_engine",
+        "index": 0,
+        "mode": "none",
+        "name": "音频控制",
+        "value": false,
+        "id": 54
+    }
+}

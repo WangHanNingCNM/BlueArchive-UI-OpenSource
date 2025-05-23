@@ -1,0 +1,22 @@
+{
+    "menu_color": "#C8000000",
+    "menu_title_background_color": "#E6000000",
+    "menu_title_gradient_text_begin_color": [
+        64,
+        224,
+        208,
+        200
+    ],
+    "menu_title_gradient_text_end_color": [
+        127,
+        255,
+        270,
+        200
+    ],
+    "menu_item_color": "#C8E6E6FA",
+    "menu_item_child_color": "#C8FFF0F5",
+    "menu_item_main_color": "#C8FFFFE0",
+    "menu_background_image_main": "背景/夜晚_主要.png",
+    "menu_background_image": "背景/夜晚_次要.png",
+    "menu_radius": 0
+}
