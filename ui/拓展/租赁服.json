@@ -1,0 +1,359 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『租 赁』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "show_dividers": false,
+    "hide_fun": true,
+    "hide": true,
+    "image": "背景/白天_次要.png",
+    "items": [
+        {
+            "type": "Switch",
+            "name": "传送菜单",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_teleport_menu",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/传送.png",
+                "on": "开关按钮_开/传送.png",
+                "icon": "开关按钮_关/传送.png"
+            }
+        },
+        {
+            "type": "TextView",
+            "name": "NBT编辑器",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_nbt_editor",
+            "shortcut": {
+                "type": "ClickButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "icon": "点击按钮/NBT.png",
+                "no_circle": true
+            }
+        },
+        {
+            "type": "Switch",
+            "name": "秒挖",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/麒麟臂.png",
+                "on": "开关按钮_开/麒麟臂.png",
+                "icon": "开关按钮_关/麒麟臂.png"
+            },
+            "tag": "fun_fast_destroy"
+        },
+        {
+            "type": "Switch",
+            "name": "锁定夜视",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "ba_night_vision"
+        },
+        {
+            "type": "Switch",
+            "name": "无摔落伤害",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_no_fall",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "no_move_check",
+                    "name": "绕过移动检查",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "no_fall_check",
+                    "name": "绕过摔落检查",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "玩家能力",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_abilities",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "mayfly",
+                    "name": "飞行权限",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "flying",
+                    "name": "飞行状态",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "noclip",
+                    "name": "穿墙",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "flySpeed",
+                    "format": "飞行速度%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 0.10,
+                    "min": 0.00,
+                    "max": 1.00
+                }
+            ],
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/能力.png",
+                "on": "开关按钮_开/能力.png",
+                "icon": "开关按钮_关/能力.png"
+            }
+        },
+        {
+            "type": "Switch",
+            "name": "自动破坏",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_destroy",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/破坏.png",
+                "on": "开关按钮_开/破坏.png",
+                "icon": "开关按钮_关/破坏.png"
+            }
+        },
+        {
+            "type": "Switch",
+            "name": "点击破坏",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_click_destroy"
+        },
+        {
+            "type": "TextView",
+            "name": "急迫255",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "plugin_command": "/ww effect 3 114514 255 false false"
+        },
+        {
+            "type": "TextView",
+            "name": "夜视",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "plugin_command": "/ww effect 16 114514 1 false false"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "聊天室 开",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "plugin_command": "/ww chatroom true"
+        },
+        {
+            "type": "TextView",
+            "name": "聊天室 关",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "plugin_command": "/ww chatroom false"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "召唤马崩服",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "ba_horse_crasher"
+        },
+        {
+            "type": "TextView",
+            "sound": "wb.mp3",
+            "name": "聊天踢人",
+            "color": "#FF8800",
+            "size": 13,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "load_script": "聊天踢人.js"
+        },
+        {
+            "type": "TextView",
+            "sound": "wb.mp3",
+            "name": "伪造发言",
+            "color": "#FF8800",
+            "size": 13,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "load_script": "伪造发言.js"
+        }
+    ]
+}

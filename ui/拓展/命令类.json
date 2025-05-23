@@ -1,0 +1,698 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『命 令』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "show_dividers": false,
+    "hide_fun": true,
+    "hide": true,
+    "image": "背景/白天_次要.png",
+    "items": [
+        {
+            "type": "TextView",
+            "name": "?",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww ?"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "查看在线玩家",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/w @s §3当前在线的玩家有:§e @a"
+        },
+        {
+            "type": "TextView",
+            "name": "查看附近的玩家(半径50)",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/w @s §3附近的玩家有:§e @e[r=50,type=player]"
+        },
+        {
+            "type": "TextView",
+            "name": "查看附近的生物(半径50)",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/w @s §3附近的生物有:§e @e[r=50,type=!player]"
+        },
+        {
+            "type": "TextView",
+            "name": "查看附近掉落物(半径50)",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/w @s §3附近的掉落物有:§e @e[type=item,r=50]"
+        },
+        {
+            "type": "TextView",
+            "name": "最近玩家",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/w @s §3离你最近的玩家是:§e @p[rm=0.5]"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "清除所有生物(除玩家)",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/kill @e[type=!player]"
+        },
+        {
+            "type": "TextView",
+            "name": "清除所有实体",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/kill @e"
+        },
+        {
+            "type": "TextView",
+            "name": "清除所有玩家",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/kill @a"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "扣L快捷键",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "send_message": "L",
+            "shortcut": {
+                "type": "ClickButton",
+                "params": [
+                    65,
+                    65
+                ],
+                "icon": "L.png",
+                "no_circle": true,
+                "send_message": "L"
+            }
+        },
+        {
+            "type": "TextView",
+            "name": "GG快捷键",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "send_message": "GG",
+            "shortcut": {
+                "type": "ClickButton",
+                "params": [
+                    65,
+                    65
+                ],
+                "icon": "GG.png",
+                "no_circle": true,
+                "send_message": "GG"
+            }
+        },
+        {
+            "type": "TextView",
+            "name": "独 立 宣 言",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "send_message": "ok兄弟们，全体目光向我看齐，看我看我，我宣布个事，我是个伞兵！没毛病ao"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "获取所有玩家皮肤",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww dumpskin /sdcard/"
+        },
+        {
+            "type": "TextView",
+            "name": "查找村庄",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww locate village"
+        },
+        {
+            "type": "TextView",
+            "name": "急迫255",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww effect 3 114514 255 false false"
+        },
+        {
+            "type": "TextView",
+            "name": "速度5",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww effect 1 114514 5 false false"
+        },
+        {
+            "type": "TextView",
+            "name": "夜视",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww effect 16 114514 1 false false"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "创造",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww mode 1"
+        },
+        {
+            "type": "TextView",
+            "name": "生存",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww mode 0"
+        },
+        {
+            "type": "TextView",
+            "name": "冒险",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww mode 2"
+        },
+        {
+            "type": "TextView",
+            "name": "旁观者",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww mode 3"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "聊天室 开",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww chatroom true"
+        },
+        {
+            "type": "TextView",
+            "name": "聊天室 关",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww chatroom false"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "UI调试 开",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww debug true"
+        },
+        {
+            "type": "TextView",
+            "name": "UI调试 关",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww debug false"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "实体日志 开",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww log true"
+        },
+        {
+            "type": "TextView",
+            "name": "实体日志 关",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww log false"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "白天",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww time 49000"
+        },
+        {
+            "type": "TextView",
+            "name": "黑夜",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "plugin_command": "/ww time 64000"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "退出游戏",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/hub"
+        },
+        {
+            "type": "TextView",
+            "name": "重开",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/again"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "队伍1",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/jointeam 0"
+        },
+        {
+            "type": "TextView",
+            "name": "队伍2",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/jointeam 1"
+        },
+        {
+            "type": "TextView",
+            "name": "队伍3",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/jointeam 2"
+        },
+        {
+            "type": "TextView",
+            "name": "队伍4",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/jointeam 3"
+        },
+        {
+            "type": "TextView",
+            "name": "队伍5",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/jointeam 4"
+        },
+        {
+            "type": "TextView",
+            "name": "队伍6",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/jointeam 5"
+        },
+        {
+            "type": "TextView",
+            "name": "队伍7",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/jointeam 6"
+        },
+        {
+            "type": "TextView",
+            "name": "队伍8",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/jointeam 7"
+        }
+    ]
+}

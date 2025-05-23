@@ -1,0 +1,869 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『玩 家』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "image": "背景/白天_次要.png",
+    "can_close": true,
+    "hide_fun": true,
+    "hide": true,
+    "items": [
+        {
+            "type": "Switch",
+            "name": "锁定夜视",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "ba_night_vision"
+        },
+        {
+            "type": "Switch",
+            "name": "自动穿装",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_armor"
+        },
+        {
+            "type": "Switch",
+            "name": "点击骑乘",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_entity_riding"
+        },
+        {
+            "type": "Switch",
+            "name": "秒挖",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/麒麟臂.png",
+                "on": "开关按钮_开/麒麟臂.png",
+                "icon": "开关按钮_关/麒麟臂.png"
+            },
+            "tag": "fun_fast_destroy"
+        },
+        {
+            "type": "Switch",
+            "name": "自动图腾",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_totem"
+        },
+        {
+            "type": "Switch",
+            "name": "无火焰附加",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_no_fire"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "上帝模式",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "ba_godmode",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "y",
+                    "format": "高度 10的%d次方",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 1,
+                    "min": 1,
+                    "max": 5
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "方块操作距离",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_extended_block_reach",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "reach",
+                    "format": "距离 %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 7,
+                    "min": 1,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "箱子小偷",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_chest_stealer",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "auto_close",
+                    "name": "自动关闭",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "delay",
+                    "format": "延时%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 0,
+                    "min": 0,
+                    "max": 30
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "箱子光环",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_chest_aura",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "距离%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 6,
+                    "min": 1,
+                    "max": 6
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "ignore_screen",
+                    "name": "忽略容器屏幕",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动金苹果",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_eat",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "fast_eat",
+                    "name": "快速食用",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "health",
+                    "format": "阈值%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 10,
+                    "min": 1,
+                    "max": 40
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动搭路",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_build",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/搭路.png",
+                "on": "开关按钮_开/搭路.png",
+                "icon": "开关按钮_关/搭路.png"
+            },
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "lock_y",
+                    "name": "锁定Y轴",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "force_place",
+                    "name": "强行放置",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "checked": true
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "offset",
+                    "format": "高度偏移%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 2.50,
+                    "min": 1.80,
+                    "max": 5.00
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "单人无敌",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_invincible",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "attack_hurt",
+                    "name": "攻击伤害",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "checked": true
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "effect_hurt",
+                    "name": "药水伤害",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "checked": true
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "forced_hurt",
+                    "name": "强制伤害",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "checked": true
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动破坏",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_destroy",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/破坏.png",
+                "on": "开关按钮_开/破坏.png",
+                "icon": "开关按钮_关/破坏.png"
+            },
+            "items": [
+                {
+                    "type": "RadioGroup",
+                    "key": "mode",
+                    "name": "破坏模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "items": [
+                        {
+                            "key": "line",
+                            "name": "线性",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "在自身位置竖一字型破坏"
+                        },
+                        {
+                            "key": "cross",
+                            "name": "十字",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "在自身位置竖十字型破坏"
+                        },
+                        {
+                            "key": "matrix",
+                            "name": "矩阵",
+                            "color": "$menu_item_child_color",
+                            "checked": true,
+                            "size": 8,
+                            "tip": "在自身位置10*10矩阵破坏"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "点击破坏",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_click_destroy",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/点击破坏.png",
+                "on": "开关按钮_开/点击破坏.png",
+                "icon": "开关按钮_关/点击破坏.png"
+            },
+            "items": [
+                {
+                    "type": "RadioGroup",
+                    "key": "mode",
+                    "name": "破坏模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "items": [
+                        {
+                            "key": "line",
+                            "name": "线性",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "在点击位置竖一字型破坏"
+                        },
+                        {
+                            "key": "cross",
+                            "name": "十字",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "在点击位置竖十字型破坏"
+                        },
+                        {
+                            "key": "matrix",
+                            "name": "矩阵",
+                            "color": "$menu_item_child_color",
+                            "checked": true,
+                            "size": 8,
+                            "tip": "在点击位置10*10矩阵破坏"
+                        }
+                    ]
+                },
+                {
+                    "type": "RadioGroup",
+                    "key": "packet_mode",
+                    "name": "发包模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "items": [
+                        {
+                            "key": "vanilla",
+                            "name": "原版",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "checked": true
+                        },
+                        {
+                            "key": "nukkit",
+                            "name": "Nukkit",
+                            "color": "$menu_item_child_color",
+                            "size": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动破坏方块",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_destroy_block",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "minecraft:cake",
+                    "name": "蛋糕",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "minecraft:bed",
+                    "name": "床",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "距离%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 7,
+                    "min": 1,
+                    "max": 40
+                },
+                {
+                    "type": "RadioGroup",
+                    "key": "packet_mode",
+                    "name": "发包模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "items": [
+                        {
+                            "key": "vanilla",
+                            "name": "原版",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "checked": true
+                        },
+                        {
+                            "key": "nukkit",
+                            "name": "Nukkit",
+                            "color": "$menu_item_child_color",
+                            "size": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "无摔落伤害",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_no_fall",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "speed",
+                    "format": "下落速度%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 1.00,
+                    "min": 0.10,
+                    "max": 2.00
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "vanilla",
+                    "name": "原版",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "mine_plex",
+                    "name": "MinePlex",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "cube_craft",
+                    "name": "CubeCraft",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "nukkit",
+                    "name": "Nukkit",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "auth_ground_pos",
+                    "name": "授权地面坐标",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "no_move_check",
+                    "name": "绕过移动检查",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "no_fall_check",
+                    "name": "绕过摔落检查",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "玩家能力",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_abilities",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/能力.png",
+                "on": "开关按钮_开/能力.png",
+                "icon": "开关按钮_关/能力.png"
+            },
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "build",
+                    "name": "建造方块",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "mine",
+                    "name": "采集方块",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "doorsandswitches",
+                    "name": "使用门和开关",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "opencontainers",
+                    "name": "打开容器",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "attackplayers",
+                    "name": "攻击玩家",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "attackmobs",
+                    "name": "攻击生物",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "op",
+                    "name": "操作员",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "teleport",
+                    "name": "使用传送",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "invulnerable",
+                    "name": "无敌",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "mayfly",
+                    "name": "可飞行",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "flying",
+                    "name": "飞行状态",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "noclip",
+                    "name": "穿墙",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "instabuild",
+                    "name": "瞬间破坏方块",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "lightning",
+                    "name": "闪电等级",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "mute",
+                    "name": "是否被禁言",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "worldbuilder",
+                    "name": "世界建设者",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "elytra_fly",
+                    "name": "鞘翅飞行",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "on": "穿上鞘翅，离开地面进入飞行模式(建议先打开飞行状态)"
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "fake_fly",
+                    "name": "伪飞行",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "flySpeed",
+                    "format": "飞行速度%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 0.10,
+                    "min": 0.00,
+                    "max": 1.00
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "walkSpeed",
+                    "format": "步行速度%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 0.10,
+                    "min": 0.00,
+                    "max": 1.00
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,305 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『世 界』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "hide_fun": true,
+    "hide": true,
+    "image": "背景/白天_次要.png",
+    "items": [
+        {
+            "type": "EditText",
+            "name": "IP外进",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "hint": "输入后，确定后自动外进",
+            "tag": "ba_join_game"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "结构菜单",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "ba_find_structure"
+        },
+        {
+            "type": "TextView",
+            "name": "召唤马",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "ba_summon_horse"
+        },
+        {
+            "type": "TextView",
+            "name": "附魔菜单",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_enchant_menu",
+            "shortcut": {
+                "type": "ClickButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "icon": "点击按钮/ENCHANT.png",
+                "no_circle": true
+            }
+        },
+        {
+            "type": "TextView",
+            "name": "物品编辑器",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_item_editor",
+            "shortcut": {
+                "type": "ClickButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "icon": "点击按钮/ITEM.png",
+                "no_circle": true
+            }
+        },
+        {
+            "type": "TextView",
+            "name": "NBT编辑器",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_nbt_editor",
+            "shortcut": {
+                "type": "ClickButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "icon": "点击按钮/NBT.png",
+                "no_circle": true
+            }
+        },
+        {
+            "type": "TextView",
+            "name": "加入世界",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_local_game"
+        },
+        {
+            "type": "TextView",
+            "name": "创建世界",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_create_world"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "覆写物品编辑器",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "ba_overwrite_item"
+        },
+        {
+            "type": "Switch",
+            "name": "建筑工具",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "tag": "script_build_tool"
+        },
+        {
+            "type": "Switch",
+            "name": "传送菜单",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_teleport_menu",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/传送.png",
+                "on": "开关按钮_开/传送.png",
+                "icon": "开关按钮_关/传送.png"
+            }
+        },
+        {
+            "type": "Switch",
+            "name": "游戏变速",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_timer",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "speed",
+                    "format": "速度%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 20,
+                    "min": 0,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "type": "RadioGroup",
+            "name": "游戏模式",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_game_mode",
+            "items": [
+                {
+                    "key": "survival",
+                    "name": "生存",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "key": "create",
+                    "name": "创造",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "key": "adventure",
+                    "name": "冒险",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "key": "spectator",
+                    "name": "观察者",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                }
+            ]
+        }
+    ]
+}

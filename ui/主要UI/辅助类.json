@@ -1,0 +1,387 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『辅 助』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "hide_fun": true,
+    "hide": true,
+    "image": "背景/白天_次要.png",
+    "items": [
+        {
+            "type": "TextView",
+            "name": "IP外进",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_join_game"
+        },
+        {
+            "type": "TextView",
+            "name": "密码爆破",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "fun_client_manager"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动钓鱼",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_fishing",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "delay",
+                    "format": "抛竿延迟%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 3,
+                    "min": 1,
+                    "max": 20
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "连锁采集",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_chain_mining",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "破坏半径%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 7,
+                    "min": 1,
+                    "max": 12
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "search_distance",
+                    "format": "搜索半径%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 10,
+                    "min": 1,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "背包移动",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_inventory_move",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "swap",
+                    "name": "交换模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "TextView",
+                    "name": "合成栏左上格",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        10,
+                        5,
+                        10,
+                        5
+                    ],
+                    "key": "crafting_left_top"
+                },
+                {
+                    "type": "TextView",
+                    "name": "合成栏右上格",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        10,
+                        5,
+                        10,
+                        5
+                    ],
+                    "key": "crafting_right_top"
+                },
+                {
+                    "type": "TextView",
+                    "name": "合成栏左下格",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        10,
+                        5,
+                        10,
+                        5
+                    ],
+                    "key": "crafting_left_bottom"
+                },
+                {
+                    "type": "TextView",
+                    "name": "合成栏右下格",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        10,
+                        5,
+                        10,
+                        5
+                    ],
+                    "key": "crafting_right_bottom"
+                },
+                {
+                    "type": "TextView",
+                    "name": "光标格",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        10,
+                        5,
+                        10,
+                        5
+                    ],
+                    "key": "cursor"
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "建造助手",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_fast_build",
+            "items": [
+                {
+                    "type": "RadioGroup",
+                    "key": "mode",
+                    "name": "建造模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "items": [
+                        {
+                            "key": "fill",
+                            "name": "填充",
+                            "color": "$menu_item_child_color",
+                            "checked": true,
+                            "size": 8,
+                            "tip": "点击的两个方块位置会作为起点和终点"
+                        },
+                        {
+                            "key": "frame",
+                            "name": "框架",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "点击的两个方块位置会作为起点和终点"
+                        },
+                        {
+                            "key": "hollow",
+                            "name": "空心",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "点击的两个方块位置会作为起点和终点"
+                        },
+                        {
+                            "key": "pellet",
+                            "name": "圆球",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "点击的位置会作为起点"
+                        },
+                        {
+                            "key": "cylinder",
+                            "name": "圆柱",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "点击的位置会作为起点"
+                        },
+                        {
+                            "key": "cone",
+                            "name": "圆锥",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "点击的位置会作为起点"
+                        },
+                        {
+                            "key": "destroy",
+                            "name": "破坏",
+                            "color": "$menu_item_child_color",
+                            "size": 8,
+                            "tip": "点击的两个方块位置会作为起点和终点"
+                        }
+                    ]
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "radius",
+                    "format": "圆半径%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 5,
+                    "min": 1,
+                    "max": 100
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "height",
+                    "format": "圆高度%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 10,
+                    "min": 1,
+                    "max": 100
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "solid",
+                    "name": "圆实心",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "tip": "设置圆是否为实心体"
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "操作距离%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 6.50,
+                    "min": 1.00,
+                    "max": 12.00
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "retry",
+                    "name": "失败重试",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "checked": true,
+                    "tip": "当放置/破坏时操作失败会尝试重新放置/破坏"
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "line_box",
+                    "name": "边界线盒",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "checked": true,
+                    "tip": "在操作的区域边界线盒"
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "pick",
+                    "name": "方块/生物选择",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "tip": "点击方块/生物会获取对应的物品和刷怪蛋（必须先为创造模式）"
+                }
+            ]
+        }
+    ]
+}

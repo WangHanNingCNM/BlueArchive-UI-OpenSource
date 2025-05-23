@@ -1,0 +1,383 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『设 置』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "image": "背景/白天_次要.png",
+    "hide_fun": true,
+    "hide": true,
+    "items": [
+        {
+            "type": "TextView",
+            "name": "退出拓展脚本",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "ba_exit"
+        },
+        {
+            "type": "TextView",
+            "name": "重新加载UI",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "ba_reload_menu"
+        },
+        {
+            "type": "TextView",
+            "name": "保存配置",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "ba_save_config"
+        },
+        {
+            "type": "TextView",
+            "name": "加载配置",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "ba_load_config"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "删除游戏数据",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_delete_app_data"
+        },
+        {
+            "type": "TextView",
+            "name": "删除用户数据",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_delete_user_data"
+        },
+        {
+            "type": "TextView",
+            "name": "删除下载缓存",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_delete_pack_cache"
+        },
+        {
+            "type": "TextView",
+            "name": "退出游戏登录",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_netease_logout"
+        },
+        {
+            "type": "TextView",
+            "name": "显示RN",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_rn_visible"
+        },
+        {
+            "type": "TextView",
+            "name": "隐藏RN",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_rn_gone"
+        },
+        {
+            "type": "TextView",
+            "name": "打开RN",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_rn_open"
+        },
+        {
+            "type": "TextView",
+            "name": "关闭RN",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_rn_close"
+        },
+        {
+            "type": "TextView",
+            "name": "显示RN开发窗口",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_rn_show_dev_options_dialog"
+        },
+        {
+            "type": "TextView",
+            "name": "MCP日志解密",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_mcp_decrypt"
+        },
+        {
+            "type": "Switch",
+            "name": "RN可调试",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_rn_debugable"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动复制IP",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "tag": "fun_join_copy_address"
+        },
+        {
+            "type": "Switch",
+            "name": "悬浮窗口半屏显示",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "checked": true,
+            "register_setting": "setting_window_cut"
+        },
+        {
+            "type": "Switch",
+            "name": "隐藏UI快捷键",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_hide_menu_shortcut",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    35,
+                    35
+                ],
+                "icon": "点击按钮/HIDE.png",
+                "on": "点击按钮/HIDE.png",
+                "off": "点击按钮/HIDE.png"
+            }
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "RadioGroup",
+            "name": "UI颜色",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "ba_menu_color",
+            "items": [
+                {
+                    "key": "Day",
+                    "name": "白天",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "key": "Night",
+                    "name": "夜间",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                }
+            ]
+        },
+        {
+            "type": "RadioGroup",
+            "name": "UI语言",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                10,
+                5,
+                10,
+                5
+            ],
+            "tag": "ba_menu_language",
+            "items": [
+                {
+                    "key": "Chinese",
+                    "name": "中文",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "key": "English",
+                    "name": "英文",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "key": "Japanese",
+                    "name": "日文",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "key": "Classical",
+                    "name": "文言文",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "key": "Korean",
+                    "name": "朝鲜语",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                }
+            ]
+        }
+    ]
+}

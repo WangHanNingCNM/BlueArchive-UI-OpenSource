@@ -1,0 +1,135 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『NetSerT』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "hide_fun": true,
+    "image": "背景/白天_次要.png",
+    "hide": true,
+    "items": [
+        {
+            "type": "TextView",
+            "name": "加载NetSerT",
+            "tip": "不要多次点击我",
+            "tag": "extra_NetSerT",
+            "color": "$menu_item_color",
+            "size": 11,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "load_script": "NetSerT.js",
+            "items": [
+                {
+                    "type": "TextView",
+                    "key": "exit",
+                    "name": "退出脚本",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "崩溃类",
+            "color": "$menu_item_color",
+            "size": 13,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "NetSerT/崩溃类"
+        },
+        {
+            "type": "TextView",
+            "name": "攻击类",
+            "color": "$menu_item_color",
+            "size": 13,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "NetSerT/攻击类"
+        },
+        {
+            "type": "TextView",
+            "name": "玩家类",
+            "color": "$menu_item_color",
+            "size": 13,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "NetSerT/玩家类"
+        },
+        {
+            "type": "TextView",
+            "name": "辅助类",
+            "color": "$menu_item_color",
+            "size": 13,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "NetSerT/辅助类"
+        },
+        {
+            "type": "TextView",
+            "name": "渲染类",
+            "color": "$menu_item_color",
+            "size": 13,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "NetSerT/渲染类"
+        },
+        {
+            "type": "TextView",
+            "name": "权限类",
+            "color": "$menu_item_color",
+            "size": 13,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "NetSerT/权限类"
+        }
+    ]
+}

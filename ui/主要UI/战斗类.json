@@ -1,0 +1,972 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『战 斗』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "hide_fun": true,
+    "hide": true,
+    "image": "背景/白天_次要.png",
+    "items": [
+        {
+            "type": "TextView",
+            "name": "打开商店",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                8,
+                8,
+                8,
+                8
+            ],
+            "tag": "fun_open_shop",
+            "tip": "您只能在花雨庭中使用此功能",
+            "shortcut": {
+                "type": "ClickButton",
+                "params": [
+                    35,
+                    35
+                ],
+                "icon": "ic_open_shop.png",
+                "no_circle": true
+            }
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "攻击范围修改",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_reach",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "reach",
+                    "format": "当前范围%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 7,
+                    "min": 1,
+                    "max": 100
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "max_reach",
+                    "format": "最大范围%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 7,
+                    "min": 1,
+                    "max": 100
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动开弓",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_bow",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "duration",
+                    "format": "时长%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 20,
+                    "min": 0,
+                    "max": 20
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "连点器",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_clicker",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/连点.png",
+                "on": "开关按钮_开/连点.png",
+                "icon": "开关按钮_关/连点.png"
+            },
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "delay",
+                    "format": "操作延迟%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 5,
+                    "min": 1,
+                    "max": 20
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "锁背",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_lock_behind",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/锁背.png",
+                "on": "开关按钮_开/锁背.png",
+                "icon": "开关按钮_关/锁背.png"
+            },
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "玩家距离%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 11.10,
+                    "min": 0.50,
+                    "max": 100.00
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "lock_target",
+                    "name": "锁定目标",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "环绕攻击",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_surround_attack",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/环绕.png",
+                "on": "开关按钮_开/环绕.png",
+                "icon": "开关按钮_关/环绕.png"
+            },
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "距离%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 11.10,
+                    "min": 0.50,
+                    "max": 50.00
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "speed",
+                    "format": "速度%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 20,
+                    "min": 1,
+                    "max": 30
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "lock_target",
+                    "name": "锁定目标",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "碰撞箱",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/碰撞箱.png",
+                "on": "开关按钮_开/碰撞箱.png",
+                "icon": "开关按钮_关/碰撞箱.png"
+            },
+            "tag": "fun_hitbox",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "player",
+                    "name": "玩家",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "mob",
+                    "name": "生物",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "size",
+                    "format": "实体大小%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 6,
+                    "min": 0,
+                    "max": 30
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "实体距离%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 6,
+                    "min": 1,
+                    "max": 30
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动选择武器",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_weapons",
+            "items": [
+                {
+                    "type": "RadioGroup",
+                    "key": "mode",
+                    "name": "选取模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "items": [
+                        {
+                            "key": "hot",
+                            "name": "物品栏",
+                            "color": "$menu_item_child_color",
+                            "checked": true,
+                            "size": 8
+                        },
+                        {
+                            "key": "inv",
+                            "name": "背包",
+                            "color": "$menu_item_child_color",
+                            "size": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动选择方块",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_block",
+            "items": [
+                {
+                    "type": "RadioGroup",
+                    "key": "mode",
+                    "name": "选取模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "items": [
+                        {
+                            "key": "hot",
+                            "name": "物品栏",
+                            "color": "$menu_item_child_color",
+                            "checked": true,
+                            "size": 8
+                        },
+                        {
+                            "key": "inv",
+                            "name": "背包",
+                            "color": "$menu_item_child_color",
+                            "size": 8
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "无击退",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_no_knockback",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "all",
+                    "name": "全部抗击退",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "horizontal",
+                    "format": "水平%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 1.00,
+                    "min": 0.10,
+                    "max": 10.00
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "vertical",
+                    "format": "垂直%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 1.00,
+                    "min": 0.10,
+                    "max": 10.00
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动瞄准",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_aimbot",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/自瞄.png",
+                "on": "开关按钮_开/自瞄.png",
+                "icon": "开关按钮_关/自瞄.png"
+            },
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "玩家距离%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 11.10,
+                    "min": 0.50,
+                    "max": 15.00
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "speed",
+                    "format": "移动速度%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 1.00,
+                    "min": 0.10,
+                    "max": 1.00
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "bow",
+                    "name": "弓箭模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "hit_box",
+                    "name": "碰撞箱模式",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "gravity",
+                    "format": "重力影响%.1f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 0.2,
+                    "min": 0.1,
+                    "max": 1.0
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "player",
+                    "name": "玩家",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "mob",
+                    "name": "生物",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "lock_target",
+                    "name": "锁定当前目标",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "input",
+                    "name": "模拟滑动",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "checked": true
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "rotations",
+                    "name": "转头锁定",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "depart",
+                    "name": "分离相机",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "智能队友",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_smart_team",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "check_armor",
+                    "name": "排除相同头盔颜色",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "check_skin",
+                    "name": "排除空皮肤",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "on": "尝试排除没有皮肤的玩家"
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "check_regex",
+                    "name": "正则表达式",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "on": "启用正则表达式匹配"
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "click_mode",
+                    "name": "点击白名单",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "on": "点击实体加入白名单"
+                },
+                {
+                    "type": "TextView",
+                    "key": "regex",
+                    "name": "编辑名称正则",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "key": "list",
+                    "name": "显示白名单",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "key": "add_chunk_player",
+                    "name": "添加区块白名单玩家",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "key": "add_world_player",
+                    "name": "添加世界白名单玩家",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "key": "remove",
+                    "name": "移除白名单玩家",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "无限光环",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "ba_Infiniteaura",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "player",
+                    "name": "玩家",
+                    "checked": true,
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "mob",
+                    "name": "生物",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "Switch",
+                    "key": "action",
+                    "name": "手部动作",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "checked": true
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "cps",
+                    "format": "攻击速度%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 2,
+                    "min": 1,
+                    "max": 20
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "count",
+                    "format": "攻击数量%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 3,
+                    "min": 1,
+                    "max": 40
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "攻击距离%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 500,
+                    "min": 500,
+                    "max": 1000
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "杀戮光环",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_killaura",
+            "shortcut": {
+                "type": "CheckedButton",
+                "params": [
+                    45,
+                    45
+                ],
+                "no_circle": true,
+                "off": "开关按钮_关/杀戮.png",
+                "on": "开关按钮_开/杀戮.png",
+                "icon": "开关按钮_关/杀戮.png"
+            },
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "target",
+                    "name": "自选",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "player",
+                    "name": "玩家",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "mob",
+                    "name": "生物",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "crystal",
+                    "name": "水晶",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "Switch",
+                    "key": "spin",
+                    "name": "旋转",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "Switch",
+                    "key": "action",
+                    "name": "手部动作",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "checked": true
+                },
+                {
+                    "type": "Switch",
+                    "key": "ec_cps",
+                    "name": "EC-CPS",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "Switch",
+                    "key": "cps",
+                    "name": "CPS显示",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "speed",
+                    "format": "攻击速度%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 20,
+                    "min": 1,
+                    "max": 40
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "count",
+                    "format": "攻击数量%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 3,
+                    "min": 1,
+                    "max": 40
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "攻击距离%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 7,
+                    "min": 1,
+                    "max": 100
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "cps_speed",
+                    "format": "CPS限制%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 2147483647,
+                    "min": 1,
+                    "max": 2147483647
+                }
+            ]
+        }
+    ]
+}

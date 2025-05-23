@@ -1,0 +1,366 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "BlueArchive",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "image": "背景/白天_主要.png",
+    "radius": 0,
+    "can_close": false,
+    "hide_fun": true,
+    "items": [
+        {
+            "type": "Switch",
+            "name": "插件水印",
+            "color": "$menu_item_main_color",
+            "size": 10,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "tag": "fun_watermark"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": "BTRebirth",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "建筑工具Rebirth/建筑工具"
+        },
+        {
+            "type": "TextView",
+            "name": "NoveXare",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "NoveXare/NoveXare"
+        },
+        {
+            "type": "TextView",
+            "name": "NetSerT",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "NetSerT/NetSerT"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": ">JS菜单<",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "load_script": "JS菜单.js"
+        },
+        {
+            "type": "TextView",
+            "name": ">PY菜单<",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "load_script": "PY菜单.js"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": ">世界菜单<",
+            "color": "#DC143C",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "主要UI/世界类"
+        },
+        {
+            "type": "TextView",
+            "name": ">玩家菜单<",
+            "color": "#FFA500",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "主要UI/玩家类"
+        },
+        {
+            "type": "TextView",
+            "name": ">战斗菜单<",
+            "color": "#FFFF00",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "主要UI/战斗类"
+        },
+        {
+            "type": "TextView",
+            "name": ">移动菜单<",
+            "color": "#00FF7F",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "主要UI/移动类"
+        },
+        {
+            "type": "TextView",
+            "name": ">视觉菜单<",
+            "color": "#20B2AA",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "主要UI/视觉类"
+        },
+        {
+            "type": "TextView",
+            "name": ">漏洞菜单<",
+            "color": "#1E90FF",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "主要UI/漏洞类"
+        },
+        {
+            "type": "TextView",
+            "name": ">辅助菜单<",
+            "color": "#9932CC",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "主要UI/辅助类"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": ">快捷命令<",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "拓展/命令类"
+        },
+        {
+            "type": "TextView",
+            "name": ">崩服菜单<",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "拓展/崩服"
+        },
+        {
+            "type": "TextView",
+            "name": ">租赁服<",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "拓展/租赁服"
+        },
+        {
+            "type": "TextView",
+            "name": ">战斗增强<",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "拓展/HVH"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": ">UI设置<",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "主要UI/UI设置"
+        },
+        {
+            "type": "TextView",
+            "name": ">召唤钢板<",
+            "color": "$menu_item_main_color",
+            "size": 10,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "tip": "已召唤钢板",
+            "run_command": "/setblock ~~50~ anvil"
+        },
+        {
+            "type": "TextView",
+            "name": "隐藏UI",
+            "color": "$menu_item_main_color",
+            "size": 10,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "tag": "fun_hide"
+        },
+        {
+            "type": "TextView",
+            "name": "打开全部菜单",
+            "color": "$menu_item_main_color",
+            "size": 10,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "tag": "ba_show_menu"
+        }
+    ]
+}
