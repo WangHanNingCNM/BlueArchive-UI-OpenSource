@@ -1,0 +1,1 @@
+loadSnapshot(File.readBinary(getResource()+'/script/HY登录器.HY'),'main()')
