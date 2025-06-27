@@ -1,0 +1,87 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『辅助类』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "hide_fun": true,
+    "image": "背景/白天_次要.png",
+    "hide": true,
+    "items": [
+        {
+            "type": "TextView",
+            "name": "辅助",
+            "color": "$menu_item_color",
+            "size": 0,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "TimeUnbound",
+            "items": [
+                {
+                    "type": "Switch",
+                    "key": "AUTO_CONNECT",
+                    "name": "自动重连",
+                    "color": "$menu_item_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 10
+                },
+                {
+                    "type": "EditText",
+                    "key": "AUTO_CONNECT_ADDR",
+                    "name": "服务器IP",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "max_lines": 1,
+                    "text": "",
+                    "hint": "'IP:端口' 或 'IP 端口' 格式都可以"
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "AUTO_CONNECT_DELAY",
+                    "format": "超时时间: %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "value": 40,
+                    "min": 1,
+                    "max": 80
+                }
+            ]
+        }
+    ]
+}

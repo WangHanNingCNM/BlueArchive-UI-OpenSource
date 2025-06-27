@@ -1,0 +1,1296 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『FHB』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "hide_fun": true,
+    "image": "背景/白天_次要.png",
+    "hide": true,
+    "items": [
+        {
+            "type": "GradientTextView",
+            "name": "━ FuHongBuild ━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ]
+        },
+        {
+            "name": "加载脚本",
+            "size": 12,
+            "color": "$menu_item_color",
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "type": "TextView",
+            "load_script": "FuHongBuild.js"
+        },
+        {
+            "name": "退出脚本",
+            "size": 12,
+            "color": "$menu_item_color",
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "type": "TextView",
+            "run_command": "/exit"
+        },
+        {
+            "name": "打开配置页",
+            "size": 12,
+            "color": "$menu_item_color",
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "type": "TextView",
+            "open": "FHB/配置类"
+        },
+        {
+            "name": "加载配置",
+            "key": "ImportConfig",
+            "size": 12,
+            "color": "$menu_item_color",
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "type": "TextView"
+        },
+        {
+            "name": "保存配置",
+            "key": "SaveConfig",
+            "size": 12,
+            "color": "$menu_item_color",
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "type": "TextView"
+        },
+        {
+            "name": "删除配置",
+            "key": "RemoveConfig",
+            "size": 12,
+            "color": "$menu_item_color",
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "type": "TextView"
+        },
+        {
+            "type": "GradientTextView",
+            "name": "━━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "$menu_item_color",
+            "size": 12,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ]
+        },
+        {
+            "type": "TextView",
+            "name": " ",
+            "color": "#3D3D3D",
+            "size": 10,
+            "padding": [
+                10,
+                -16,
+                10,
+                0
+            ],
+            "tag": "FuHongBuildFunc",
+            "items": [
+                {
+                    "type": "GradientTextView",
+                    "name": "━其余功能━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "Switch",
+                    "key": "AttackSelf",
+                    "name": "攻击自己",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "Switch",
+                    "key": "NoJitter",
+                    "name": "无抖动",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "Switch",
+                    "key": "GetClickBlock",
+                    "name": "获取点击的方块",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "Switch",
+                    "key": "GetClickBlockNbt",
+                    "name": "点击方块nbt信息",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "GetClickBlockNbt_SaveLocal",
+                    "name": "数据保存本地",
+                    "color": "$menu_item_color",
+                    "checked": false,
+                    "size": 8
+                },
+                {
+                    "type": "Switch",
+                    "key": "GetClickCommandBlockInfo",
+                    "name": "查看点击命令块",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "Switch",
+                    "key": "DisplayBlock",
+                    "name": "显示区块边界",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "Switch",
+                    "key": "ShowAttackAim",
+                    "name": "显示攻击目标",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": true
+                },
+                {
+                    "type": "TextView",
+                    "name": "玩家坐标信息",
+                    "key": "PlayerSiteInfo",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "选择指定玩家传送",
+                    "key": "PlayerSiteMove",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "建筑文件管理\n删除",
+                    "key": "Build_FileManagement_Remove",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "建筑仓库",
+                    "color": "$menu_item_color",
+                    "key": "ConstructionWarehouse",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "清理默认加载脚本",
+                    "color": "$menu_item_color",
+                    "key": "ClearDefaultLoadScript",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "断开服务端链接",
+                    "color": "$menu_item_color",
+                    "key": "DisconnectServer",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "mcID查询",
+                    "color": "$menu_item_color",
+                    "key": "QueryMinecraftItems",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "重载自身数据",
+                    "key": "RefreshSelfData",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "Schematic转换",
+                    "color": "$menu_item_color",
+                    "key": "SchematicConversion",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "html": "<a href=\"\">schem新转旧</a>",
+                    "url": "https://fuhongweb.cn/res/schemToSchematic/",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "tip": "schem转换schematic 请在网页端转换后使用schematic解析"
+                },
+                {
+                    "type": "TextView",
+                    "name": "建筑仓库",
+                    "color": "$menu_item_color",
+                    "key": "ConstructionWarehouse",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "清理默认加载脚本",
+                    "color": "$menu_item_color",
+                    "key": "ClearDefaultLoadScript",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━导入━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "导入",
+                    "color": "$menu_item_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "DisplayLog",
+                    "name": "显示导入命令日志",
+                    "color": "$menu_item_child_color",
+                    "checked": false,
+                    "size": 8
+                },
+                {
+                    "type": "RadioGroup",
+                    "key": "Build_FunctionMode",
+                    "name": "导入模式选择",
+                    "color": "$menu_item_color",
+                    "size": 10,
+                    "items": [
+                        {
+                            "key": "Function1",
+                            "name": "Fill导入",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": false
+                        },
+                        {
+                            "key": "Function2",
+                            "name": "Fill导入 - 2",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": true
+                        },
+                        {
+                            "key": "Function3",
+                            "name": "SetBlock导入",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": false
+                        },
+                        {
+                            "key": "Function4",
+                            "name": "服务器导入",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": false
+                        },
+                        {
+                            "key": "Projection",
+                            "name": "投影导入",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": false
+                        },
+                        {
+                            "key": "Build",
+                            "name": "生存导入",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "铺设拒绝方块",
+                    "key": "Build_LayDeny",
+                    "color": "$menu_item_child_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "函数选择说明",
+                    "key": "Function_ChoiceExplanation",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "RadioGroup",
+                    "key": "Build_AuxiliaryEntityMode",
+                    "name": "辅助实体 (停用)",
+                    "color": "$menu_item_color",
+                    "size": 10,
+                    "items": [
+                        {
+                            "key": "Entity",
+                            "name": "实体",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": false
+                        },
+                        {
+                            "key": "Player",
+                            "name": "玩家",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Switch",
+                    "key": "Build_SetSite",
+                    "name": "设置导入坐标",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "Switch",
+                    "key": "PauseTool",
+                    "name": "暂停工具",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "TextView",
+                    "name": "撤销任务",
+                    "key": "WithdrawBuild",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "跳过当前方块建造任务",
+                    "key": "SkipBuild_Task",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "结束全部任务",
+                    "key": "StopAllBuildTask",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "可选导入",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "建筑",
+                    "key": "BuildListMenu",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "html": "<a href=\"\">像素画</a>",
+                    "url": "http://fuhongweb.cn/res/pixel_art/fuhong_pixel/",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "tip": "请在网页端转换后使用建筑导入"
+                },
+                {
+                    "type": "TextView",
+                    "html": "<a href=\"\">midi音乐转换</a>",
+                    "url": "https://fuhongweb.cn/res/midiToJson/",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "tip": "请在网页端转换原版音乐格式"
+                },
+                {
+                    "type": "TextView",
+                    "name": "音乐",
+                    "key": "SoundListMenu",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "TXT命令",
+                    "key": "TextCmdListMenu",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━ 导出 ━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "命令导出",
+                    "color": "$menu_item_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "设置起点坐标",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "run_command": "/set"
+                },
+                {
+                    "type": "TextView",
+                    "name": "设置终点坐标",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "run_command": "/setend"
+                },
+                {
+                    "type": "EditText",
+                    "key": "CommandExport_Name",
+                    "name": "命令导出名称",
+                    "color": "$menu_item_color",
+                    "gravity": [
+                        "left"
+                    ],
+                    "size": 11,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ],
+                    "max_lines": 16,
+                    "hint": "导出名称 可不填写"
+                },
+                {
+                    "type": "TextView",
+                    "name": "开始命令导出",
+                    "key": "CmdExport",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "Switch",
+                    "key": "Export_CommandDisplayInfo",
+                    "name": "显示距离信息",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "TextView",
+                    "name": "其余可用导出",
+                    "color": "$menu_item_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "两点输入坐标导出",
+                    "key": "PosExport",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "自定义范围导出",
+                    "key": "RangeExport",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "手动两点导出",
+                    "key": "TwoPointsExport",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "name": "退出脚本",
+                    "key": "ExitMenu",
+                    "size": 12,
+                    "color": "$menu_item_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "type": "TextView",
+                    "run_command": "/exit"
+                },
+                {
+                    "type": "TextView",
+                    "name": "清理掉落物",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "clearItem"
+                },
+                {
+                    "type": "TextView",
+                    "name": "随机传送玩家",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "randomMovePlayer"
+                },
+                {
+                    "type": "TextView",
+                    "name": "向上移动20格",
+                    "key": "MoveUP20Blocks",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "向准星移动40格",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "aimMove"
+                },
+                {
+                    "type": "TextView",
+                    "name": "生成闪电",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "playersLightningBolt"
+                },
+                {
+                    "type": "TextView",
+                    "name": "脚底放置平台",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "LayRandomFloor"
+                },
+                {
+                    "type": "TextView",
+                    "name": "清空附近方块",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "ClearBlock"
+                },
+                {
+                    "type": "TextView",
+                    "name": "清空背包",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "clearSelfBackpack"
+                },
+                {
+                    "type": "TextView",
+                    "name": "获取随机剑",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "getRandomSword"
+                },
+                {
+                    "type": "TextView",
+                    "name": "添加夜视",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "plugin_command": "/ww effect 16 999999 1 false false"
+                },
+                {
+                    "type": "TextView",
+                    "name": "移除药水效果",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "plugin_command": "/ww effect clear"
+                },
+                {
+                    "type": "TextView",
+                    "name": "关于工具与文档",
+                    "color": "$menu_item_color",
+                    "key": "ToolDocument",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "更新日志",
+                    "color": "$menu_item_color",
+                    "key": "UpdateLogDisplay",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "退出世界",
+                    "color": "$menu_item_color",
+                    "key": "LeaveWorld",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "TextView",
+                    "name": "坐标追踪",
+                    "color": "$menu_item_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "Switch",
+                    "key": "AimTrace",
+                    "name": "坐标追踪",
+                    "color": "$menu_item_color",
+                    "size": 11
+                },
+                {
+                    "type": "EditText",
+                    "key": "AimTrace_Pos",
+                    "name": "坐标追踪坐标配置",
+                    "color": "$menu_item_child_color",
+                    "gravity": [
+                        "left"
+                    ],
+                    "size": 11,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ],
+                    "max_lines": 10,
+                    "hint": "目标坐标",
+                    "text": "204 60 104"
+                },
+                {
+                    "type": "Switch",
+                    "key": "FastConstruct",
+                    "name": "两点快速建造",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "checked": false
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "FastConstruct_OnlyAir",
+                    "name": "仅限空气方块下放置",
+                    "color": "$menu_item_child_color",
+                    "checked": true,
+                    "size": 8
+                },
+                {
+                    "type": "RadioGroup",
+                    "key": "FastConstruct_Mode",
+                    "name": "填充模式",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "items": [
+                        {
+                            "key": "Fill",
+                            "name": "填充",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": true
+                        },
+                        {
+                            "key": "Frame",
+                            "name": "框架",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": false
+                        },
+                        {
+                            "key": "Destroy",
+                            "name": "破坏",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": false
+                        },
+                        {
+                            "key": "Clear",
+                            "name": "清空",
+                            "color": "$menu_item_child_color",
+                            "size": 10,
+                            "checked": false
+                        }
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━显示类功能━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                },
+                {
+                    "type": "Switch",
+                    "key": "DisplayInfo",
+                    "name": "显示总开关",
+                    "color": "$menu_item_color",
+                    "checked": false,
+                    "size": 11
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "DisplayInfo_GradualChange",
+                    "name": "全局渐变显示",
+                    "color": "$menu_item_child_color",
+                    "checked": false,
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "DisplayInfo_DecimalLength",
+                    "format": "全局小数点长度:%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "value": 4,
+                    "min": 1,
+                    "max": 16
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "DisplayInfo_SelfSite",
+                    "name": "自身坐标信息",
+                    "color": "$menu_item_child_color",
+                    "checked": true,
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "DisplayInfo_AimPos",
+                    "name": "准星目标信息",
+                    "color": "$menu_item_child_color",
+                    "checked": false,
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "DisplayInfo_CmdImport",
+                    "name": "命令输入",
+                    "color": "$menu_item_child_color",
+                    "checked": false,
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "DisplayInfo_UserInfo",
+                    "name": "用户信息",
+                    "color": "$menu_item_child_color",
+                    "checked": false,
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "DisplayInfo_PlayerInfo",
+                    "name": "玩家信息",
+                    "color": "$menu_item_child_color",
+                    "checked": false,
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "DisplayInfo_WorldInfo",
+                    "name": "世界信息",
+                    "color": "$menu_item_child_color",
+                    "checked": false,
+                    "size": 8
+                },
+                {
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ]
+                }
+            ]
+        }
+    ]
+}

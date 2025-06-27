@@ -50,8 +50,21 @@
             "load_script": "Rebirth.js"
         },
         {
+            "type": "GradientTextView",
+            "name": "━━━━",
+            "start_color": "#00BFFF",
+            "end_color": "#8A2BE2",
+            "size": 12,
+            "padding": [
+                0,
+                -4,
+                0,
+                -4
+            ]
+        },
+        {
             "type": "TextView",
-            "name": "修改配置",
+            "name": "配置菜单",
             "color": "$menu_item_color",
             "size": 12,
             "padding": [
@@ -61,6 +74,19 @@
                 5
             ],
             "open": "建筑工具Rebirth/设置项"
+        },
+        {
+            "type": "TextView",
+            "name": "工具菜单",
+            "color": "$menu_item_color",
+            "size": 12,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "建筑工具Rebirth/工具项"
         },
         {
             "type": "GradientTextView",
@@ -129,19 +155,6 @@
                     "key": "LOAD"
                 },
                 {
-                    "type": "Switch",
-                    "key": "STOP",
-                    "name": "暂停导入",
-                    "color": "$menu_item_color",
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "size": 12
-                },
-                {
                     "type": "GradientTextView",
                     "name": "━━━━━",
                     "start_color": "#00BFFF",
@@ -153,6 +166,19 @@
                         5,
                         0
                     ]
+                },
+                {
+                    "type": "Switch",
+                    "key": "CLICK_COPY",
+                    "name": "点击导出",
+                    "color": "$menu_item_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 12
                 },
                 {
                     "type": "TextView",
@@ -198,12 +224,12 @@
                     "key": "FASTCOPY_XZ",
                     "format": "水平大小: %d",
                     "color": "$menu_item_child_color",
-                    "size": 12,
+                    "size": 10,
                     "padding": [
-                        5,
-                        5,
-                        5,
-                        5
+                        0,
+                        0,
+                        0,
+                        0
                     ],
                     "value": 50,
                     "min": 1,
@@ -214,6 +240,21 @@
                     "key": "FASTCOPY_Y",
                     "format": "垂直大小: %d",
                     "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 25,
+                    "min": 1,
+                    "max": 160
+                },
+                {
+                    "type": "TextView",
+                    "name": "取消导出",
+                    "color": "$menu_item_color",
                     "size": 12,
                     "padding": [
                         5,
@@ -221,22 +262,20 @@
                         5,
                         5
                     ],
-                    "value": 25,
-                    "min": 1,
-                    "max": 160
+                    "key": "CANCEL_EXPORT"
                 },
                 {
-                    "type": "Switch",
-                    "key": "CLICK_COPY",
-                    "name": "点击导出",
-                    "color": "$menu_item_color",
+                    "type": "GradientTextView",
+                    "name": "━━━━━",
+                    "start_color": "#00BFFF",
+                    "end_color": "#8A2BE2",
+                    "size": 12,
                     "padding": [
                         5,
+                        0,
                         5,
-                        5,
-                        5
-                    ],
-                    "size": 12
+                        0
+                    ]
                 },
                 {
                     "type": "TextView",
@@ -253,7 +292,7 @@
                 },
                 {
                     "type": "TextView",
-                    "name": "导入存档(不推荐)",
+                    "name": "导入存档",
                     "color": "$menu_item_color",
                     "size": 12,
                     "padding": [
@@ -304,69 +343,17 @@
                     "size": 12
                 },
                 {
-                    "type": "GradientTextView",
-                    "name": "━━━━━",
-                    "start_color": "#00BFFF",
-                    "end_color": "#8A2BE2",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        0,
-                        5,
-                        0
-                    ]
-                },
-                {
-                    "type": "TextView",
-                    "name": "退出世界",
+                    "type": "Switch",
+                    "key": "STOP",
+                    "name": "暂停导入",
                     "color": "$menu_item_color",
-                    "size": 12,
                     "padding": [
                         5,
                         5,
                         5,
                         5
                     ],
-                    "key": "LEAVE"
-                },
-                {
-                    "type": "TextView",
-                    "name": "向上传送",
-                    "color": "$menu_item_color",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "key": "TP_UP"
-                },
-                {
-                    "type": "TextView",
-                    "name": "放置方块",
-                    "color": "$menu_item_color",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "key": "SETBLOCK"
-                },
-                {
-                    "type": "TextView",
-                    "name": "取消任务",
-                    "color": "$menu_item_color",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "key": "CANCEL"
+                    "size": 12
                 },
                 {
                     "type": "TextView",
@@ -383,45 +370,6 @@
                 },
                 {
                     "type": "TextView",
-                    "name": "传送地图角落-小",
-                    "color": "$menu_item_color",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "key": "TP_MAP_S"
-                },
-                {
-                    "type": "TextView",
-                    "name": "向前传送50格",
-                    "color": "$menu_item_color",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "key": "TP_FORWARD"
-                },
-                {
-                    "type": "TextView",
-                    "name": "放置固定命令方块",
-                    "color": "$menu_item_color",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "key": "PLACE_CMD"
-                },
-                {
-                    "type": "TextView",
                     "name": "结束任务",
                     "color": "$menu_item_color",
                     "size": 12,
@@ -432,6 +380,19 @@
                         5
                     ],
                     "key": "END_TASK"
+                },
+                {
+                    "type": "TextView",
+                    "name": "取消任务",
+                    "color": "$menu_item_color",
+                    "size": 12,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "CANCEL"
                 },
                 {
                     "type": "GradientTextView",
@@ -445,58 +406,6 @@
                         5,
                         0
                     ]
-                },
-                {
-                    "type": "Switch",
-                    "key": "CLICK_GET",
-                    "name": "点击选择方块&实体",
-                    "color": "$menu_item_color",
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "size": 12
-                },
-                {
-                    "type": "Switch",
-                    "key": "SHOW_CHUNK",
-                    "name": "显示区块",
-                    "color": "$menu_item_color",
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "size": 12
-                },
-                {
-                    "type": "Switch",
-                    "key": "NO_OUTPUT",
-                    "name": "禁用指令输出",
-                    "color": "$menu_item_color",
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "size": 12
-                },
-                {
-                    "type": "Switch",
-                    "key": "NO_TIP",
-                    "name": "禁用指令提示",
-                    "color": "$menu_item_color",
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "size": 12
                 },
                 {
                     "type": "Switch",
@@ -618,76 +527,6 @@
                     "size": 12
                 },
                 {
-                    "type": "RadioGroup",
-                    "key": "GAME_MODE",
-                    "name": "游戏模式",
-                    "color": "$menu_item_color",
-                    "size": 12,
-                    "items": [
-                        {
-                            "key": "CREATE",
-                            "name": "创造",
-                            "color": "$menu_item_child_color",
-                            "checked": true,
-                            "size": 10
-                        },
-                        {
-                            "key": "SURVIVAL",
-                            "name": "生存",
-                            "color": "$menu_item_child_color",
-                            "size": 10
-                        },
-                        {
-                            "key": "SPECTATOR",
-                            "name": "观察者",
-                            "color": "$menu_item_child_color",
-                            "size": 10
-                        }
-                    ]
-                },
-                {
-                    "type": "SeekBar",
-                    "key": "FLY_SPEED",
-                    "format": "飞行速度: %d倍",
-                    "color": "$menu_item_color",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "value": 1,
-                    "min": 1,
-                    "max": 10
-                },
-                {
-                    "type": "EditText",
-                    "key": "EXECUTE_CMD",
-                    "name": "指令(绕违禁词)",
-                    "color": "$menu_item_child_color",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ]
-                },
-                {
-                    "type": "TextView",
-                    "name": "执行指令",
-                    "color": "$menu_item_color",
-                    "size": 12,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "key": "EXECUTE"
-                },
-                {
                     "type": "GradientTextView",
                     "name": "━━━━━",
                     "start_color": "#00BFFF",
@@ -720,10 +559,10 @@
                     "color": "$menu_item_child_color",
                     "size": 10,
                     "padding": [
-                        5,
-                        5,
-                        5,
-                        5
+                        0,
+                        0,
+                        0,
+                        0
                     ],
                     "value": 4,
                     "min": 1,
@@ -736,10 +575,10 @@
                     "color": "$menu_item_child_color",
                     "size": 10,
                     "padding": [
-                        5,
-                        5,
-                        5,
-                        5
+                        0,
+                        0,
+                        0,
+                        0
                     ],
                     "value": 0,
                     "min": -5,
@@ -752,10 +591,10 @@
                     "color": "$menu_item_child_color",
                     "size": 10,
                     "padding": [
-                        5,
-                        5,
-                        5,
-                        5
+                        0,
+                        0,
+                        0,
+                        0
                     ],
                     "value": 0,
                     "min": -5,
@@ -801,70 +640,20 @@
                     "key": "CANCEL_SMART"
                 },
                 {
-                    "type": "SeekBar",
-                    "key": "DUMP_SPEED",
-                    "format": "导出速度: %d",
+                    "type": "CheckBox",
+                    "key": "DUMP_CONFIRM",
+                    "name": "导出确认",
                     "color": "$menu_item_child_color",
-                    "size": 10,
                     "padding": [
                         5,
                         5,
                         5,
                         5
                     ],
-                    "value": 5,
-                    "min": 1,
-                    "max": 200
+                    "size": 10
                 },
                 {
-                    "type": "SeekBar",
-                    "key": "DUMP_DISTANCE",
-                    "format": "导出距离: %d 格",
-                    "color": "$menu_item_child_color",
-                    "size": 10,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "value": 100,
-                    "min": 1,
-                    "max": 1000
-                },
-                {
-                    "type": "SeekBar",
-                    "key": "DUMP_NUM",
-                    "format": "导出数量: %d 个",
-                    "color": "$menu_item_child_color",
-                    "size": 10,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "value": 100000,
-                    "min": 1000,
-                    "max": 999999
-                },
-                {
-                    "type": "EditText",
-                    "key": "DUMPLING_NAMESPACE",
-                    "name": "排除导出列表",
-                    "color": "$menu_item_child_color",
-                    "size": 10,
-                    "padding": [
-                        5,
-                        5,
-                        5,
-                        5
-                    ],
-                    "max_lines": 1,
-                    "text": "air,grass,dirt"
-                },
-                {
-                    "type": "Switch",
+                    "type": "CheckBox",
                     "key": "DUMP_TP",
                     "name": "导出传送",
                     "color": "$menu_item_child_color",
@@ -890,6 +679,69 @@
                     ],
                     "max_lines": 1,
                     "text": "64"
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "DUMP_SPEED",
+                    "format": "导出速度: %d",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 5,
+                    "min": 1,
+                    "max": 200
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "DUMP_DISTANCE",
+                    "format": "导出距离: %d 格",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 100,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "DUMP_NUM",
+                    "format": "导出数量: %d 个",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 100000,
+                    "min": 1000,
+                    "max": 999999
+                },
+                {
+                    "type": "EditText",
+                    "key": "DUMPLING_NAMESPACE",
+                    "name": "排除导出列表",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "max_lines": 1,
+                    "text": "air,grass,dirt"
                 },
                 {
                     "type": "GradientTextView",
@@ -963,10 +815,10 @@
                     "color": "$menu_item_child_color",
                     "size": 10,
                     "padding": [
-                        5,
-                        5,
-                        5,
-                        5
+                        0,
+                        0,
+                        0,
+                        0
                     ],
                     "value": 5,
                     "min": 1,
@@ -979,10 +831,10 @@
                     "color": "$menu_item_child_color",
                     "size": 10,
                     "padding": [
-                        5,
-                        5,
-                        5,
-                        5
+                        0,
+                        0,
+                        0,
+                        0
                     ],
                     "value": 100,
                     "min": 1,
@@ -995,10 +847,10 @@
                     "color": "$menu_item_child_color",
                     "size": 10,
                     "padding": [
-                        5,
-                        5,
-                        5,
-                        5
+                        0,
+                        0,
+                        0,
+                        0
                     ],
                     "value": 100000,
                     "min": 1000,
@@ -1031,41 +883,91 @@
                     "size": 12
                 },
                 {
-                    "type": "SeekBar",
-                    "key": "SURVIVAL_DISTANCE",
-                    "format": "最大距离: %d",
+                    "type": "CheckBox",
+                    "key": "INFO_BLOCKS",
+                    "name": "显示方块列表",
                     "color": "$menu_item_child_color",
-                    "size": 10,
                     "padding": [
                         5,
                         5,
                         5,
                         5
+                    ],
+                    "checked": true,
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "SURVIVAL_DISTANCE",
+                    "format": "放置距离: %d",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
                     ],
                     "value": 7,
                     "min": 1,
                     "max": 10
                 },
                 {
-                    "type": "SeekBar",
-                    "key": "SURVIVAL_HEIGHT",
-                    "format": "传送高度偏移: %d",
+                    "type": "CheckBox",
+                    "key": "SURVIVAL_SELECT",
+                    "name": "自动方块",
                     "color": "$menu_item_child_color",
-                    "size": 10,
                     "padding": [
                         5,
                         5,
                         5,
                         5
                     ],
-                    "value": 2,
-                    "min": 0,
-                    "max": 5
+                    "size": 10
                 },
                 {
                     "type": "CheckBox",
-                    "key": "SURVIVAL_SELECT",
-                    "name": "自动方块",
+                    "key": "SURVIVAL_NOAUX",
+                    "name": "忽略特殊值",
+                    "color": "$menu_item_child_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 10
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "SURVIVAL_EXCLUDE",
+                    "name": "排除非空气",
+                    "color": "$menu_item_child_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 10
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "SURVIVAL_DESTROY",
+                    "name": "破坏原有方块",
+                    "color": "$menu_item_child_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 10
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "SURVIVAL_CHECK",
+                    "name": "确保成功放置",
                     "color": "$menu_item_child_color",
                     "padding": [
                         5,
@@ -1087,6 +989,22 @@
                         5
                     ],
                     "size": 10
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "SURVIVAL_HEIGHT",
+                    "format": "传送高度偏移: %d",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 2,
+                    "min": 0,
+                    "max": 5
                 },
                 {
                     "type": "GradientTextView",

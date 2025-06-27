@@ -37,6 +37,29 @@
             "tag": "fun_watermark"
         },
         {
+            "type": "TextView",
+            "name": "UI水印",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "tip": "请长按我打开水印",
+            "shortcut": {
+                "type": "ClickButton",
+                "params": [
+                    200,
+                    200
+                ],
+                "icon": "水印/水印.png",
+                "no_circle": true
+            },
+            "tag": "ba_water_mark"
+        },
+        {
             "type": "GradientTextView",
             "name": "━━━━",
             "start_color": "#00BFFF",
@@ -87,6 +110,32 @@
                 4
             ],
             "open": "NetSerT/NetSerT"
+        },
+        {
+            "type": "TextView",
+            "name": "FuHongBuild",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "FHB/主菜单"
+        },
+        {
+            "type": "TextView",
+            "name": "TimeUnbound",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "TimeUnbound/主菜单"
         },
         {
             "type": "GradientTextView",
@@ -246,6 +295,19 @@
         },
         {
             "type": "TextView",
+            "name": ">定制类<",
+            "color": "$menu_item_main_color",
+            "size": 11,
+            "padding": [
+                5,
+                4,
+                5,
+                4
+            ],
+            "open": "主要UI/定制类"
+        },
+        {
+            "type": "TextView",
             "name": ">快捷命令<",
             "color": "$menu_item_main_color",
             "size": 11,
@@ -338,7 +400,7 @@
         },
         {
             "type": "TextView",
-            "name": "隐藏UI",
+            "name": "- 关闭全部UI -",
             "color": "$menu_item_main_color",
             "size": 10,
             "padding": [
@@ -351,7 +413,7 @@
         },
         {
             "type": "TextView",
-            "name": "打开全部菜单",
+            "name": "- 打开全部UI -",
             "color": "$menu_item_main_color",
             "size": 10,
             "padding": [

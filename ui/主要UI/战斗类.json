@@ -35,14 +35,13 @@
                 8
             ],
             "tag": "fun_open_shop",
-            "tip": "您只能在花雨庭中使用此功能",
             "shortcut": {
                 "type": "ClickButton",
                 "params": [
-                    35,
-                    35
+                    45,
+                    45
                 ],
-                "icon": "ic_open_shop.png",
+                "icon": "点击按钮/SHOP.png",
                 "no_circle": true
             }
         },
@@ -57,6 +56,37 @@
                 -4,
                 0,
                 -4
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "自动开弓",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_auto_bow",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "duration",
+                    "format": "时长%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 20,
+                    "min": 2,
+                    "max": 40
+                }
             ]
         },
         {
@@ -103,37 +133,6 @@
                     "value": 7,
                     "min": 1,
                     "max": 100
-                }
-            ]
-        },
-        {
-            "type": "Switch",
-            "name": "自动开弓",
-            "color": "$menu_item_color",
-            "size": 10,
-            "padding": [
-                5,
-                0,
-                5,
-                0
-            ],
-            "tag": "fun_auto_bow",
-            "items": [
-                {
-                    "type": "SeekBar",
-                    "key": "duration",
-                    "format": "时长%d",
-                    "color": "$menu_item_child_color",
-                    "size": 8,
-                    "padding": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    "value": 20,
-                    "min": 0,
-                    "max": 20
                 }
             ]
         },

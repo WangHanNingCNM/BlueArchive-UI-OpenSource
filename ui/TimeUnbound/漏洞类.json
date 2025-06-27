@@ -1,0 +1,256 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『漏洞类』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "hide_fun": true,
+    "image": "背景/白天_次要.png",
+    "hide": true,
+    "items": [
+        {
+            "type": "TextView",
+            "name": "漏洞",
+            "color": "$menu_item_color",
+            "size": 0,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "TimeUnbound",
+            "items": [
+                {
+                    "type": "Switch",
+                    "key": "GLOBE_PACKET",
+                    "name": "全图攻击",
+                    "color": "$menu_item_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 10
+                },
+                {
+                    "type": "TextView",
+                    "name": "白名单设置",
+                    "color": "$menu_item_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "GLOBE_SET"
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "GLOBE_EXCLUDE",
+                    "name": "排除自己",
+                    "color": "$menu_item_child_color",
+                    "checked": true,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "GLOBE_DELAY",
+                    "format": "延迟: %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "value": 5,
+                    "min": 1,
+                    "max": 40
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "GLOBE_ATTACK",
+                    "name": "百米",
+                    "color": "$menu_item_child_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "GLOBE_SHADOW",
+                    "name": "虚影",
+                    "color": "$menu_item_child_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "GLOBE_SHADOW_RANGE",
+                    "format": "虚影大小: %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "value": 3,
+                    "min": 1,
+                    "max": 9
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "GLOBE_SHADOW_OFFSET",
+                    "format": "高度偏移: %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "value": 2,
+                    "min": -5,
+                    "max": 5
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "GLOBE_SOUND",
+                    "name": "音频爆破",
+                    "color": "$menu_item_child_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 8
+                },
+                {
+                    "type": "EditText",
+                    "key": "GLOBE_SOUND_ID",
+                    "name": "音频ID",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "max_lines": 1,
+                    "text": "0"
+                },
+                {
+                    "type": "Switch",
+                    "key": "CRASHER",
+                    "name": "静默卡服",
+                    "color": "$menu_item_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "size": 10
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "CRASHER_RATE",
+                    "format": "卡服程度: %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "value": 10,
+                    "min": 1,
+                    "max": 100
+                },
+                {
+                    "type": "TextView",
+                    "name": "租赁服秒传",
+                    "color": "$menu_item_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "key": "SERVER_TP"
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "SERVER_TP_tp",
+                    "name": "自动传送",
+                    "color": "$menu_item_child_color",
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "checked": true,
+                    "size": 8
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "SERVER_TP_offset",
+                    "format": "高度偏移: %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "value": 2,
+                    "min": -10,
+                    "max": 10
+                }
+            ]
+        }
+    ]
+}

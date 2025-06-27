@@ -104,8 +104,8 @@
                 },
                 {
                     "type": "Switch",
-                    "key": "NightVision",
-                    "name": "夜视",
+                    "key": "AvoidAttack",
+                    "name": "逃逸空间",
                     "color": "$menu_item_color",
                     "size": 11,
                     "padding": [
@@ -117,8 +117,8 @@
                 },
                 {
                     "type": "Switch",
-                    "key": "AvoidAttack",
-                    "name": "逃逸空间",
+                    "key": "SimulateButton",
+                    "name": "按键模拟",
                     "color": "$menu_item_color",
                     "size": 11,
                     "padding": [
@@ -127,6 +127,154 @@
                         5,
                         5
                     ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "sb_forward",
+                    "name": "向前",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "checked": true,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "sb_back",
+                    "name": "向后",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "sb_left",
+                    "name": "向左",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "sb_right",
+                    "name": "向右",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "sb_click",
+                    "name": "放置/攻击",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "sb_long",
+                    "name": "破坏/交互",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "sb_interact",
+                    "name": "交互",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "Switch",
+                    "key": "EffEctManager",
+                    "name": "药效管理",
+                    "color": "$menu_item_color",
+                    "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "em_nv",
+                    "name": "夜视",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "checked": true,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "em_eff",
+                    "name": "效率",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "em_level",
+                    "format": "等级 %d",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ],
+                    "value": 1,
+                    "min": 1,
+                    "max": 255
                 },
                 {
                     "type": "Switch",
@@ -209,6 +357,7 @@
                         {
                             "key": "Inventory",
                             "name": "背包",
+                            "checked": true,
                             "color": "$menu_item_child_color",
                             "size": 10
                         }
@@ -335,6 +484,7 @@
                         {
                             "key": "Aux",
                             "name": "特殊值",
+                            "checked": true,
                             "color": "$menu_item_child_color",
                             "size": 10
                         },
@@ -360,8 +510,8 @@
                 },
                 {
                     "type": "Switch",
-                    "key": "BypassMute",
-                    "name": "绕过禁言",
+                    "key": "ReplaceMsg",
+                    "name": "替换发言",
                     "color": "$menu_item_color",
                     "size": 11
                 },
@@ -375,6 +525,7 @@
                         {
                             "key": "/me",
                             "name": "强调消息",
+                            "checked": true,
                             "color": "$menu_item_child_color",
                             "size": 10
                         },
@@ -633,6 +784,7 @@
                         {
                             "key": "Player",
                             "name": "玩家",
+                            "checked": true,
                             "color": "$menu_item_child_color",
                             "size": 10
                         },
@@ -805,6 +957,13 @@
                         {
                             "key": "Packet",
                             "name": "玩家授权认证",
+                            "checked": true,
+                            "color": "$menu_item_child_color",
+                            "size": 10
+                        },
+                        {
+                            "key": "Move",
+                            "name": "移动玩家",
                             "color": "$menu_item_child_color",
                             "size": 10
                         }
@@ -976,6 +1135,7 @@
                         {
                             "key": "HYT",
                             "name": "花雨庭",
+                            "checked": true,
                             "color": "$menu_item_child_color",
                             "size": 10
                         },
@@ -1035,6 +1195,7 @@
                         {
                             "key": "Tip",
                             "name": "提示",
+                            "checked": true,
                             "color": "$menu_item_child_color",
                             "size": 10
                         },
@@ -1326,6 +1487,7 @@
                         {
                             "key": "All",
                             "name": "停止发包",
+                            "checked": true,
                             "color": "$menu_item_child_color",
                             "size": 10
                         },
@@ -1580,6 +1742,7 @@
                         {
                             "key": "ForEach",
                             "name": "遍历",
+                            "checked": true,
                             "color": "$menu_item_child_color",
                             "size": 10
                         },
@@ -1643,6 +1806,7 @@
                         {
                             "key": "Error-Build",
                             "name": "建造方块",
+                            "checked": true,
                             "color": "$menu_item_child_color",
                             "size": 10
                         },
@@ -1675,6 +1839,24 @@
                             "name": "攻击",
                             "color": "$menu_item_child_color",
                             "size": 10
+                        },
+                        {
+                            "key": "AuthPacket",
+                            "name": "玩家授权认证",
+                            "color": "$menu_item_child_color",
+                            "size": 10
+                        },
+                        {
+                            "key": "PlayerAction",
+                            "name": "玩家行为",
+                            "color": "$menu_item_child_color",
+                            "size": 10
+                        },
+                        {
+                            "key": "Crash",
+                            "name": "卡服",
+                            "color": "$menu_item_child_color",
+                            "size": 10
                         }
                     ]
                 },
@@ -1690,7 +1872,7 @@
                         5,
                         5
                     ],
-                    "value": 50,
+                    "value": 75,
                     "min": 1,
                     "max": 500
                 },
@@ -1768,6 +1950,20 @@
                     "name": "音效播放器",
                     "color": "$menu_item_color",
                     "size": 11,
+                    "padding": [
+                        5,
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "sp_info",
+                    "name": "显示音乐信息",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "checked": true,
                     "padding": [
                         5,
                         5,

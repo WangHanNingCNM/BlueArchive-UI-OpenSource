@@ -10,16 +10,25 @@
         "主要UI/辅助类",
         "主要UI/UI设置",
         "主要UI/漏洞类",
+        "主要UI/定制类",
         "拓展/命令类",
         "拓展/崩服",
         "拓展/HVH",
         "拓展/租赁服",
         "建筑工具Rebirth/建筑工具",
         "建筑工具Rebirth/设置项",
+        "建筑工具Rebirth/工具项",
+        "FHB/主菜单",
+        "FHB/配置类",
+        "TimeUnbound/挖矿类",
+        "TimeUnbound/漏洞类",
+        "TimeUnbound/辅助类",
+        "TimeUnbound/主菜单",
+        "TimeUnbound/建筑工具类",
         "NoveXare/NoveXare",
         "NoveXare/辅助类",
         "NoveXare/战斗类",
-        "NoveXare/事件类",
+        "NoveXare/开发类",
         "NoveXare/娱乐类",
         "NoveXare/移动类",
         "NoveXare/玩家类",
@@ -34,6 +43,7 @@
         "NetSerT/NetSerT"
     ],
     "fun": [
+        "ba_water_mark",
         "ba_save_config",
         "ba_load_config",
         "ba_find_structure",
@@ -59,7 +69,9 @@
         "build_tool_rebirth",
         "extra_nex",
         "extra_nove_xare",
-        "extra_NetSerT"
+        "extra_NetSerT",
+        "FuHongBuildFunc",
+        "TimeUnbound"
     ],
     "script": [
         "BlueArchive.js"

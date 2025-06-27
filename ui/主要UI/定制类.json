@@ -1,0 +1,486 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『定 制』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "hide_fun": true,
+    "hide": true,
+    "image": "背景/白天_次要.png",
+    "items": [
+        {
+            "type": "Switch",
+            "name": "仙境复制",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_fast_add_item",
+            "items": [
+                {
+                    "type": "TextView",
+                    "name": "丢出背包物品(除手持)",
+                    "color": "$menu_item_color",
+                    "size": 8,
+                    "padding": [
+                        5,
+                        0,
+                        5,
+                        0
+                    ],
+                    "key": "drop_inv"
+                },
+                {
+                    "type": "Switch",
+                    "key": "auto_drop",
+                    "name": "自动丢出",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "on": "首次点击工作台"
+                },
+                {
+                    "type": "Switch",
+                    "key": "auto_chest",
+                    "name": "自动入箱(空箱子)",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "on": "点击目标箱子"
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "卡人",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_super_0"
+        },
+        {
+            "type": "Switch",
+            "name": "百米大刀",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_super_1",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "POS_Y_MAX",
+                    "format": "最高Y坐标 - %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 804,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "MAX_RANGE",
+                    "format": "最远范围 - %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 500,
+                    "min": 1,
+                    "max": 1000
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "ATTACK_COUNT",
+                    "format": "攻击和点击次数 - %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 3,
+                    "min": 1,
+                    "max": 10
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "AUTO_INTERVAL",
+                    "format": "自动传送间隔 - %d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 15,
+                    "min": 1,
+                    "max": 50
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "COLLISION_X_MIN",
+                    "format": "最低X碰撞箱 - %.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 0.1,
+                    "min": 0.1,
+                    "max": 2.0
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "COLLISION_Y_MIN",
+                    "format": "最低Y碰撞箱 - %.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 0.1,
+                    "min": 0.1,
+                    "max": 2.0
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "悬浮手",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_super_2",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "fov",
+                    "format": "视角%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 120,
+                    "min": 0,
+                    "max": 180
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "兔子跳",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_super_3"
+        },
+        {
+            "type": "Switch",
+            "name": "旋转头",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "on": "自己的头不停旋转",
+            "tag": "fun_super_4"
+        },
+        {
+            "type": "Switch",
+            "name": "伪OP",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "on": "让自己拥有假的管理员权限",
+            "tag": "fun_super_5"
+        },
+        {
+            "type": "Switch",
+            "name": "刀刀暴击",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_super_6"
+        },
+        {
+            "type": "Switch",
+            "name": "自我崩溃",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "on": "快速崩溃自己退出游戏",
+            "tag": "fun_super_7"
+        },
+        {
+            "type": "Switch",
+            "name": "自我介绍",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "on": "进服自动发送“服务器已被入侵”",
+            "tag": "fun_super_8"
+        },
+        {
+            "type": "Switch",
+            "name": "攻击特效",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "on": "攻击目标触发闪电",
+            "tag": "fun_super_9",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "count",
+                    "format": "持续时间%d游戏刻",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 30,
+                    "min": 10,
+                    "max": 60
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "粒子爆破",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_super_10",
+            "items": [
+                {
+                    "type": "SeekBar",
+                    "key": "count",
+                    "format": "数量%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 100,
+                    "min": 100,
+                    "max": 1000
+                },
+                {
+                    "type": "TextView",
+                    "name": "选中目标",
+                    "color": "$menu_item_child_color",
+                    "size": 10,
+                    "padding": [
+                        10,
+                        10,
+                        10,
+                        10
+                    ],
+                    "key": "click"
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "无限光环",
+            "color": "$menu_item_color",
+            "size": 10,
+            "padding": [
+                5,
+                0,
+                5,
+                0
+            ],
+            "tag": "fun_super_11",
+            "on": "在租赁服或者联机使用",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "key": "player",
+                    "name": "玩家",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "mob",
+                    "name": "生物",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "CheckBox",
+                    "key": "crystal",
+                    "name": "水晶",
+                    "color": "$menu_item_child_color",
+                    "size": 8
+                },
+                {
+                    "type": "Switch",
+                    "key": "spin",
+                    "name": "旋转",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "on": "攻击时触发三叉戟范围攻击"
+                },
+                {
+                    "type": "Switch",
+                    "key": "action",
+                    "name": "手部动作",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "on": "攻击时让手部挥动，其他人可见",
+                    "checked": true
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "speed",
+                    "format": "攻击速度%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 20,
+                    "min": 1,
+                    "max": 40
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "count",
+                    "format": "攻击数量%d",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 3,
+                    "min": 1,
+                    "max": 40
+                },
+                {
+                    "type": "SeekBar",
+                    "key": "distance",
+                    "format": "攻击距离%.2f",
+                    "color": "$menu_item_child_color",
+                    "size": 8,
+                    "padding": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "value": 7.0,
+                    "min": 1.0,
+                    "max": 100.0
+                }
+            ]
+        }
+    ]
+}

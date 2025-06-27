@@ -1,0 +1,105 @@
+{
+    "type": "Menu",
+    "title": {
+        "name": "『TimeUnbound』",
+        "size": 12,
+        "elevation": 3,
+        "background": "$menu_title_background_color",
+        "padding": [
+            5,
+            4,
+            5,
+            4
+        ],
+        "colors": [
+            "$menu_title_gradient_text_begin_color",
+            "$menu_title_gradient_text_end_color"
+        ]
+    },
+    "color": "$menu_color",
+    "alpha": 0.9,
+    "can_close": true,
+    "hide_fun": true,
+    "image": "背景/白天_次要.png",
+    "hide": true,
+    "items": [
+        {
+            "type": "TextView",
+            "name": "加载脚本",
+            "color": "$menu_item_color",
+            "size": 12,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "load_script": "TimeUnbound.js"
+        },
+        {
+            "type": "TextView",
+            "name": "退出脚本",
+            "color": "$menu_item_color",
+            "size": 12,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "run_command": "/exit"
+        },
+        {
+            "type": "TextView",
+            "name": "漏洞类",
+            "color": "$menu_item_color",
+            "size": 12,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "TimeUnbound/漏洞类"
+        },
+        {
+            "type": "TextView",
+            "name": "建筑工具类",
+            "color": "$menu_item_color",
+            "size": 12,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "TimeUnbound/建筑工具类"
+        },
+        {
+            "type": "TextView",
+            "name": "辅助类",
+            "color": "$menu_item_color",
+            "size": 12,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "TimeUnbound/辅助类"
+        },
+        {
+            "type": "TextView",
+            "name": "挖矿类",
+            "color": "$menu_item_color",
+            "size": 12,
+            "padding": [
+                5,
+                5,
+                5,
+                5
+            ],
+            "open": "TimeUnbound/挖矿类"
+        }
+    ]
+}

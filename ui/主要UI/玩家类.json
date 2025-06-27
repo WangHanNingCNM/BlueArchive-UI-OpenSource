@@ -440,13 +440,13 @@
                             "name": "十字",
                             "color": "$menu_item_child_color",
                             "size": 8,
-                            "tip": "在自身位置竖十字型破坏"
+                            "tip": "在自身位置竖十字型破坏",
+                            "checked": true
                         },
                         {
                             "key": "matrix",
                             "name": "矩阵",
                             "color": "$menu_item_child_color",
-                            "checked": true,
                             "size": 8,
                             "tip": "在自身位置10*10矩阵破坏"
                         }
@@ -497,13 +497,13 @@
                             "name": "十字",
                             "color": "$menu_item_child_color",
                             "size": 8,
-                            "tip": "在点击位置竖十字型破坏"
+                            "tip": "在点击位置竖十字型破坏",
+                            "checked": true
                         },
                         {
                             "key": "matrix",
                             "name": "矩阵",
                             "color": "$menu_item_child_color",
-                            "checked": true,
                             "size": 8,
                             "tip": "在点击位置10*10矩阵破坏"
                         }
@@ -669,14 +669,16 @@
                     "key": "no_move_check",
                     "name": "绕过移动检查",
                     "color": "$menu_item_child_color",
-                    "size": 8
+                    "size": 8,
+                    "checked": true
                 },
                 {
                     "type": "CheckBox",
                     "key": "no_fall_check",
                     "name": "绕过摔落检查",
                     "color": "$menu_item_child_color",
-                    "size": 8
+                    "size": 8,
+                    "checked": true
                 }
             ]
         },
