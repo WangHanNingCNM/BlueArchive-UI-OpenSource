@@ -5,6 +5,7 @@ var self_rot = getEntityRot(self_id)
 
 var Config = {}
 
+
 //杀戮光环
 regFun("LN_KillAura")
 var KillAura = false
@@ -1644,10 +1645,26 @@ function UI() {
                 {"type":"CheckBox","key":"BackStab_Crasher","name":"崩溃","color":"#2ecc71","size":10,"checked":true},
                 {"type":"SeekBar","key":"BackStab_Num","format":"次数%d","color":"#2ecc71","size":10,"padding":[0,0,0,0],"value":5,"min":1,"max":20}
             ]},
-            {"type":"Switch","name":"百米拾取","color":"#2c3e50","size":12,"padding":[8,4,8,4],"tag":"LN_InfiniteItem","items":[
-                {"type":"SeekBar","key":"InfiniteItem_Num","format":"发包次数%d","color":"#2ecc71","size":10,"padding":[0,0,0,0],"value":1,"min":1,"max":5},
-                {"type":"SeekBar","key":"InfiniteItem_Delay","format":"遍历延迟%d","color":"#2ecc71","size":10,"padding":[0,0,0,0],"value":1,"min":0,"max":10}
-            ]},
+            {
+    "type":"Switch",
+    "name":"百米拾取",
+    "color":"#2c3e50",
+    "size":12,
+    "padding":[8,4,8,4],
+    "tag":"LN_InfiniteItem",
+    "shortcut": {
+        "type": "CheckedButton",
+        "params": [50, 25],
+        "icon": "LN/bmsqgb.png",
+        "on": "LN/bmsqkq.png",
+        "off": "LN/bmsqgb.png",
+        "no_circle": true
+    },
+    "items":[
+        {"type":"SeekBar","key":"InfiniteItem_Num","format":"发包次数%d","color":"#2ecc71","size":10,"padding":[0,0,0,0],"value":1,"min":1,"max":5},
+        {"type":"SeekBar","key":"InfiniteItem_Delay","format":"遍历延迟%d","color":"#2ecc71","size":10,"padding":[0,0,0,0],"value":1,"min":0,"max":10}
+    ]
+},
             {"type":"Switch","name":"范围卡人","color":"#2c3e50","size":12,"padding":[8,4,8,4],"tag":"LN_RangeCrasher","items":[
                 {"type":"SeekBar","key":"RangeCrasher_Range","format":"范围%d","color":"#2ecc71","size":10,"padding":[0,0,0,0],"value":3,"min":1,"max":10},
                 {"type":"SeekBar","key":"RangeCrasher_Num","format":"数量%d","color":"#2ecc71","size":10,"padding":[0,0,0,0],"value":3,"min":1,"max":10}
@@ -2146,34 +2163,50 @@ function UI() {
         }
     ]
 },
-            {"type":"Switch","name":"服务器群百","color":"#f1c40f","size":12,"padding":[8,4,8,4],"tag":"LN_InfiniteAura","items":[
-                {"type":"RadioGroup","key":"inf_SelectMode","name":"索敌模式","color":"#f1c40f","size":10,"items":[
-                    {"key":"health","name":"血量最少","color":"#f1c40f","checked":true,"size":8},
-                    {"key":"Distance","name":"距离最近","color":"#f1c40f","size":8},
-                    {"key":"Random","name":"随机选择","color":"#f1c40f","size":8}
-                ]},
-                {"type":"SeekBar","key":"inf_MaxRange","format":"索敌范围%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":1000,"min":1,"max":1000},
-                {"type":"SeekBar","key":"inf_MaxY","format":"最大高度%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":500,"min":-100,"max":500},
-                {"type":"SeekBar","key":"inf_MinY","format":"最小高度%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":-100,"min":-100,"max":500},
-                {"type":"CheckBox","key":"inf_Regex","name":"使用正则","color":"#f1c40f","size":10},
-                {"type":"CheckBox","key":"inf_While","name":"使用白名单","color":"#f1c40f","size":10},
-                {"type":"CheckBox","key":"inf_Black","name":"使用黑名单","color":"#f1c40f","size":10},
-                {"type":"EditText","key":"inf_RegexList","name":"正则编辑","color":"#f1c40f","size":10,"max_lines":1,"text":"原神,启动","padding":[5,5,5,5]},
-                {"type":"EditText","key":"inf_WhiteList","name":"白名单编辑","color":"#f1c40f","size":10,"max_lines":1,"text":"没有内容","padding":[5,5,5,5]},
-                {"type":"EditText","key":"inf_BlackList","name":"黑名单编辑","color":"#f1c40f","size":10,"max_lines":1,"text":"没有内容","padding":[5,5,5,5]},
-                {"type":"SeekBar","key":"inf_SwitchDelay","format":"遍历延迟%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":0,"min":0,"max":10},
-                {"type":"SeekBar","key":"inf_offset_y","format":"Y轴偏移%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":3,"min":-10,"max":10},
-                {"type":"SeekBar","key":"inf_MaxTarget","format":"目标数量%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":3,"min":1,"max":40},
-                {"type":"SeekBar","key":"inf_DelayTick","format":"攻击延迟%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":5,"min":1,"max":20},
-                {"type":"CheckBox","key":"inf_ServerMode","name":"租赁服兼容","color":"#f1c40f","size":10,"checked":true},
-                {"type":"CheckBox","key":"inf_TpClick","name":"传送点击","color":"#f1c40f","size":10,"checked":true},
-                {"type":"CheckBox","key":"inf_Back","name":"返回原点","color":"#f1c40f","size":10,"checked":true},
-                {"type":"CheckBox","key":"inf_BackClick","name":"返回点击","color":"#f1c40f","size":10,"checked":true},
-                {"type":"CheckBox","key":"inf_action","name":"攻击挥手","color":"#f1c40f","size":10},
-                {"type":"SeekBar","key":"inf_BackDelay","format":"返回延迟%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":0,"min":0,"max":20},
-                {"type":"SeekBar","key":"inf_TpNum","format":"传送次数%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":3,"min":1,"max":10},
-                {"type":"SeekBar","key":"inf_AttackNum","format":"攻击次数%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":1,"min":0,"max":10}
-            ]}
+            {
+    "type":"Switch",
+    "name":"服务器群百",
+    "color":"#f1c40f",
+    "size":12,
+    "padding":[8,4,8,4],
+    "tag":"LN_InfiniteAura",
+    "shortcut": {
+        "type": "CheckedButton",
+        "params": [50, 25],
+        "icon": "LN/bmddgb.png",
+        "on": "LN/bmddkq.png",
+        "off": "LN/bmddgb.png",
+        "no_circle": true
+    },
+    "items":[
+        {"type":"RadioGroup","key":"inf_SelectMode","name":"索敌模式","color":"#f1c40f","size":10,"items":[
+            {"key":"health","name":"血量最少","color":"#f1c40f","checked":true,"size":8},
+            {"key":"Distance","name":"距离最近","color":"#f1c40f","size":8},
+            {"key":"Random","name":"随机选择","color":"#f1c40f","size":8}
+        ]},
+        {"type":"SeekBar","key":"inf_MaxRange","format":"索敌范围%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":1000,"min":1,"max":1000},
+        {"type":"SeekBar","key":"inf_MaxY","format":"最大高度%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":500,"min":-100,"max":500},
+        {"type":"SeekBar","key":"inf_MinY","format":"最小高度%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":-100,"min":-100,"max":500},
+        {"type":"CheckBox","key":"inf_Regex","name":"使用正则","color":"#f1c40f","size":10},
+        {"type":"CheckBox","key":"inf_While","name":"使用白名单","color":"#f1c40f","size":10},
+        {"type":"CheckBox","key":"inf_Black","name":"使用黑名单","color":"#f1c40f","size":10},
+        {"type":"EditText","key":"inf_RegexList","name":"正则编辑","color":"#f1c40f","size":10,"max_lines":1,"text":"原神,启动","padding":[5,5,5,5]},
+        {"type":"EditText","key":"inf_WhiteList","name":"白名单编辑","color":"#f1c40f","size":10,"max_lines":1,"text":"没有内容","padding":[5,5,5,5]},
+        {"type":"EditText","key":"inf_BlackList","name":"黑名单编辑","color":"#f1c40f","size":10,"max_lines":1,"text":"没有内容","padding":[5,5,5,5]},
+        {"type":"SeekBar","key":"inf_SwitchDelay","format":"遍历延迟%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":0,"min":0,"max":10},
+        {"type":"SeekBar","key":"inf_offset_y","format":"Y轴偏移%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":0,"min":-10,"max":10},
+        {"type":"SeekBar","key":"inf_MaxTarget","format":"目标数量%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":3,"min":1,"max":40},
+        {"type":"SeekBar","key":"inf_DelayTick","format":"攻击延迟%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":5,"min":1,"max":20},
+        {"type":"CheckBox","key":"inf_ServerMode","name":"租赁服兼容","color":"#f1c40f","size":10,"checked":true},
+        {"type":"CheckBox","key":"inf_TpClick","name":"传送点击","color":"#f1c40f","size":10,"checked":true},
+        {"type":"CheckBox","key":"inf_Back","name":"返回原点","color":"#f1c40f","size":10,"checked":true},
+        {"type":"CheckBox","key":"inf_BackClick","name":"返回点击","color":"#f1c40f","size":10,"checked":true},
+        {"type":"CheckBox","key":"inf_action","name":"攻击挥手","color":"#f1c40f","size":10},
+        {"type":"SeekBar","key":"inf_BackDelay","format":"返回延迟%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":0,"min":0,"max":20},
+        {"type":"SeekBar","key":"inf_TpNum","format":"传送次数%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":3,"min":1,"max":10},
+        {"type":"SeekBar","key":"inf_AttackNum","format":"攻击次数%d","color":"#f1c40f","size":10,"padding":[0,0,0,0],"value":1,"min":0,"max":10}
+    ]
+}
         ]
     }`)
 
@@ -2201,6 +2234,14 @@ function UI() {
     "size":12,
     "padding":[8,4,8,4],
     "tag":"LN_KillAura",
+    "shortcut": {
+        "type": "CheckedButton",
+        "params": [50, 25],
+        "icon": "LN/slgb.png",
+        "on": "LN/slkq.png",
+        "off": "LN/slgb.png",
+        "no_circle": true
+    },
     "items":[
         {"type":"SeekBar","key":"KillAura_Range","format":"范围 %.1f格","color":"#3498db","size":10,"value":4.0,"min":1,"max":8,"step":0.5},
         {"type":"SeekBar","key":"KillAura_FOV","format":"视野 %d°","color":"#3498db","size":10,"value":90,"min":0,"max":360,"step":1},
@@ -2208,28 +2249,28 @@ function UI() {
         {"type":"CheckBox","key":"KillAura_AttackPlayers","name":"不攻击生物","color":"#3498db","checked":true},
         {"type":"CheckBox","key":"KillAura_AttackMobs","name":"不攻击玩家","color":"#3498db","checked":true},
         {
-    "type": "RadioGroup",
-    "key": "KillAura_SelectMode",
-    "name": "目标排序",
-    "color": "#3498db",
-    "size": 10,
-    "items": [
-        {"key": "distance", "name": "距离优先", "checked": true},
-        {"key": "health", "name": "血量优先"}
+            "type": "RadioGroup",
+            "key": "KillAura_SelectMode",
+            "name": "目标排序",
+            "color": "#3498db",
+            "size": 10,
+            "items": [
+                {"key": "distance", "name": "距离优先", "checked": true},
+                {"key": "health", "name": "血量优先"}
+            ]
+        },
+        {
+            "type": "SeekBar",
+            "key": "KillAura_MaxTargets",
+            "format": "最大目标%d",
+            "color": "#3498db",
+            "size": 10,
+            "value": 3,
+            "min": 1,
+            "max": 5
+        }
     ]
 },
-{
-    "type": "SeekBar",
-    "key": "KillAura_MaxTargets",
-    "format": "最大目标%d",
-    "color": "#3498db",
-    "size": 10,
-    "value": 3,
-    "min": 1,
-    "max": 5
-}
-    ]
-    },
         {
     "type": "Switch",
     "name": "智能自瞄",

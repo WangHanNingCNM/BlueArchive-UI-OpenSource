@@ -1,8 +1,16 @@
+/*
+ * 有一分光，便发一分热。
+ * Deobfuscated by: Sartre
+ * TaskID: 9a3f7e2c | Version: 16.9
+ * 只要做了哪怕再少，就永远比只会敲键盘的，精致的利己主义者强千倍万倍。
+ * Timestamp: Thu Jun 27 21:50:46 2025
+ */
+ 
 const main_path = getResource();
 const definition = JSON['parse'](File['read'](main_path + '/ui/ui_definition.json'));
-if (definition['name'] != 'BlueArchiveUI' || definition['ui']['length'] != 0x1f) {
+if (definition['name'] != 'BlueArchiveUI' || definition['ui']['length'] != 0x28) {
   clientMessage('§b[BlueArchive]§e请使用BlueArchive UI');
-  exit();
+  //exit();
 }
 regFun('ba_script_menu');
 if (getData('isFirst', '') === '') {
@@ -18,10 +26,10 @@ if (getData('isFirst', '') === '') {
 }
 var scriptList = File['list'](getResource('script'));
 var Config = JSON['parse'](getData('scriptMenu', '{}'));
-if (Config['sort'] === 0x1) scriptList['sort']((_0x3a84c4, _0x23fe33) => _0x3a84c4['name']['localeCompare'](_0x23fe33['name']));
-if (Config['sort'] === 0x2) scriptList['sort']((_0x2be237, _0x4cfe22) => _0x2be237['length'] - _0x4cfe22['length']);
-if (Config['sort'] === 0x3) scriptList['sort']((_0x421706, _0x377919) => _0x377919['name']['localeCompare'](_0x421706['name']));
-if (Config['sort'] === 0x4) scriptList['sort']((_0x40a4d6, _0xe421ef) => _0xe421ef['length'] - _0x40a4d6['length']);
+if (Config['sort'] === 0x1) scriptList['sort']((_0x1265b9, _0x589b2a) => _0x1265b9['name']['localeCompare'](_0x589b2a['name']));
+if (Config['sort'] === 0x2) scriptList['sort']((_0x262b80, _0x2fcc8c) => _0x262b80['length'] - _0x2fcc8c['length']);
+if (Config['sort'] === 0x3) scriptList['sort']((_0x5f28fb, _0x3b8247) => _0x3b8247['name']['localeCompare'](_0x5f28fb['name']));
+if (Config['sort'] === 0x4) scriptList['sort']((_0x59a3b3, _0x3453b2) => _0x3453b2['length'] - _0x59a3b3['length']);
 var items = [{
   'type': 'TextView',
   'name': '退出',
@@ -45,27 +53,27 @@ var items = [{
   'key': 'ba_script_history'
 }, {
   'type': 'TextView',
-  'name': '上次加载的脚本',
+  'name': '上次加载的脚本:\n' + Config['last'],
   'color': '$menu_item_color',
   'size': 0xb,
   'padding': [0x5, 0x4, 0x5, 0x4],
   'key': 'ba_last_script'
 }];
-scriptList['forEach'](_0x5e17f7 => {
-  if (!_0x5e17f7['name']['endsWith']('.js') && !_0x5e17f7['name']['endsWith']('.bin') && !_0x5e17f7['name']['endsWith']('.gbrc')) return;
+scriptList['forEach'](_0x15a7d9 => {
+  if (!_0x15a7d9['name']['endsWith']('.js') && !_0x15a7d9['name']['endsWith']('.bin') && !_0x15a7d9['name']['endsWith']('.gbrc')) return;
   items['push']({
     'type': 'TextView',
-    'name': _0x5e17f7['name']['replace']('.js', '')['replace']('.bin', '')['replace']('.gbrc', ''),
+    'name': _0x15a7d9['name']['replace']('.js', '')['replace']('.bin', '')['replace']('.gbrc', ''),
     'color': '$menu_item_child_color',
     'size': 0xb,
     'padding': [0x8, 0x4, 0x8, 0x4],
-    'key': 'script:' + _0x5e17f7['name']
+    'key': 'script:' + _0x15a7d9['name']
   });
 });
-const createUI = (_0x24f2ec, _0x5837a8, _0xf53faa) => loadMenu(_0x24f2ec, JSON['stringify']({
+const createUI = (_0x4b6e7e, _0x39db40, _0x118c8d) => loadMenu(_0x4b6e7e, JSON['stringify']({
   'type': 'Menu',
   'title': {
-    'name': '『' + _0x5837a8 + '』',
+    'name': '『' + _0x39db40 + '』',
     'size': 0xc,
     'elevation': 0x3,
     'background': '$menu_title_background_color',
@@ -84,45 +92,45 @@ const createUI = (_0x24f2ec, _0x5837a8, _0xf53faa) => loadMenu(_0x24f2ec, JSON['
     'size': 0xd,
     'padding': [0x5, 0x5, 0x5, 0x5],
     'tag': 'ba_script_menu',
-    'items': _0xf53faa
+    'items': _0x118c8d
   }]
 }));
-const load = (_0x4c7f80, _0x1c7860) => {
-  if (_0x1c7860 < 0x1) _0x1c7860 = 0x1;
-  if (_0x1c7860 > 0x3) _0x1c7860 = 0x3;
+const load = (_0x151a6f, _0x19251f) => {
+  if (_0x19251f < 0x1) _0x19251f = 0x1;
+  if (_0x19251f > 0x3) _0x19251f = 0x3;
   thread(() => {
-    var _0x1f9b0a = false;
-    for (let _0x284926 = 0x0; _0x284926 < Config['frequency']; _0x284926++) {
-      if (_0x4c7f80['endsWith']('.bin') || _0x4c7f80['endsWith']('.gbrc')) _0x1f9b0a = loadSnapshot(File['readBinary'](getResource('script') + '/' + _0x4c7f80));else {
-        if (_0x1c7860 === 0x1) _0x1f9b0a = loadScript(_0x4c7f80);
-        if (_0x1c7860 === 0x2) _0x1f9b0a = eval(getResource('script') + '/' + _0x4c7f80);
+    var _0x73d452 = false;
+    for (let _0x4b2772 = 0x0; _0x4b2772 < Config['frequency']; _0x4b2772++) {
+      if (_0x151a6f['endsWith']('.bin') || _0x151a6f['endsWith']('.gbrc')) _0x73d452 = loadSnapshot(File['readBinary'](getResource('script') + '/' + _0x151a6f));else {
+        if (_0x19251f === 0x1) _0x73d452 = loadScript(_0x151a6f);
+        if (_0x19251f === 0x2) _0x73d452 = eval(getResource('script') + '/' + _0x151a6f);
       }
     }
-    Config['last'] = _0x4c7f80;
-    let _0x5a419d = Config['history']['findIndex'](_0x212698 => _0x212698['name'] === _0x4c7f80);
-    showToast('加载' + _0x4c7f80 + (_0x1f9b0a ? '成功' : '失败'));
-    if (_0x1f9b0a && (Config['history']['length'] === 0x0 || _0x5a419d === -0x1)) Config['history']['push']({
-      'name': _0x4c7f80,
+    Config['last'] = _0x151a6f;
+    let _0x2e12ff = Config['history']['findIndex'](_0x4b3672 => _0x4b3672['name'] === _0x151a6f);
+    showToast('加载' + _0x151a6f + (_0x73d452 ? '成功' : '失败'));
+    if (_0x73d452 && (Config['history']['length'] === 0x0 || _0x2e12ff === -0x1)) Config['history']['push']({
+      'name': _0x151a6f,
       'count': 0x1
     });
-    if (_0x5a419d > -0x1) Config['history'][_0x5a419d]['count']++;
+    if (_0x2e12ff > -0x1) Config['history'][_0x2e12ff]['count']++;
   }, Config['delay']);
 };
-function onCallModuleEvent(_0x345bfb) {
-  if (_0x345bfb['fun'] !== 'ba_script_menu') return;
-  if (_0x345bfb['key']) {
-    let _0x5b554b = _0x345bfb['key'];
-    if (_0x5b554b['includes']('script:')) load(_0x5b554b['replace']('script:', ''), Config['loadMode']);
-    if (_0x5b554b === 'ba_last_script') load(Config['last'], Config['loadMode']);
-    if (_0x5b554b === 'ba_history_exit') setTimeout(() => {
+function onCallModuleEvent(_0x4d1bb6) {
+  if (_0x4d1bb6['fun'] !== 'ba_script_menu') return;
+  if (_0x4d1bb6['key']) {
+    let _0x1a547e = _0x4d1bb6['key'];
+    if (_0x1a547e['includes']('script:')) load(_0x1a547e['replace']('script:', ''), Config['loadMode']);
+    if (_0x1a547e === 'ba_last_script') load(Config['last'], Config['loadMode']);
+    if (_0x1a547e === 'ba_history_exit') setTimeout(() => {
       hideMenu('History');
       removeMenu('History');
     }, 0x32);
-    if (_0x5b554b === 'ba_settings_exit') setTimeout(() => {
+    if (_0x1a547e === 'ba_settings_exit') setTimeout(() => {
       hideMenu('UISettings');
       removeMenu('UISettings');
     }, 0x32);
-    if (_0x5b554b === 'ba_script_exit') {
+    if (_0x1a547e === 'ba_script_exit') {
       setTimeout(() => {
         hideMenu('UISettings');
         hideMenu('ScriptList');
@@ -136,9 +144,9 @@ function onCallModuleEvent(_0x345bfb) {
       setTimeout(() => exit(), 0x1f4);
       showToast('已退出脚本菜单');
     }
-    if (_0x5b554b === 'ba_script_history') {
+    if (_0x1a547e === 'ba_script_history') {
       if (Config['history']['length'] === 0x0) return;
-      let _0x229f4a = [{
+      let _0x3078c3 = [{
         'type': 'TextView',
         'name': '关闭',
         'color': '#DC143C',
@@ -146,19 +154,19 @@ function onCallModuleEvent(_0x345bfb) {
         'padding': [0x5, 0x4, 0x5, 0x4],
         'key': 'ba_history_exit'
       }];
-      Config['history']['toSorted']((_0x16f5bb, _0x57ab6c) => _0x16f5bb['count'] - _0x57ab6c['count'])['forEach'](_0x577c03 => {
-        _0x229f4a['push']({
+      Config['history']['toSorted']((_0x47dd0a, _0x3472ab) => _0x47dd0a['count'] - _0x3472ab['count'])['forEach'](_0x2e2f8d => {
+        _0x3078c3['push']({
           'type': 'TextView',
-          'name': _0x577c03['name'] + '\n加载次数:' + _0x577c03['count'] + '次',
+          'name': _0x2e2f8d['name'] + '\n加载次数:' + _0x2e2f8d['count'] + '次',
           'color': '$menu_item_child_color',
           'size': 0xb,
           'padding': [0x8, 0x4, 0x8, 0x4],
-          'key': 'script:' + _0x577c03['name']
+          'key': 'script:' + _0x2e2f8d['name']
         });
       });
-      createUI('History', '历史记录', _0x229f4a);
+      createUI('History', '历史记录', _0x3078c3);
     }
-    if (_0x5b554b === 'ba_script_settings') createUI('UISettings', '脚本设置', [{
+    if (_0x1a547e === 'ba_script_settings') createUI('UISettings', '脚本设置', [{
       'type': 'TextView',
       'name': '关闭',
       'color': '#DC143C',
@@ -233,14 +241,14 @@ function onCallModuleEvent(_0x345bfb) {
       }]
     }]);
   }
-  for (let _0x41a56c in _0x345bfb) {
-    if (['value', 'fun', 'name', 'index', 'shortcut']['includes'](_0x41a56c)) continue;
-    let _0x49919c = _0x41a56c;
-    let _0x30b4bc = _0x345bfb[_0x41a56c];
-    if (_0x49919c === 'ba_script_delay') Config['delay'] = _0x30b4bc;
-    if (_0x49919c === 'ba_script_frequency') Config['frequency'] = _0x30b4bc;
-    if (_0x49919c === 'ba_script_sort') Config['sort'] = _0x345bfb['index'];
-    if (_0x49919c === 'ba_script_loadMode') Config['loadMode'] = _0x345bfb['index'];
+  for (let _0x4ac623 in _0x4d1bb6) {
+    if (['value', 'fun', 'name', 'index', 'shortcut']['includes'](_0x4ac623)) continue;
+    let _0x53c542 = _0x4ac623;
+    let _0x45d707 = _0x4d1bb6[_0x4ac623];
+    if (_0x53c542 === 'ba_script_delay') Config['delay'] = _0x45d707;
+    if (_0x53c542 === 'ba_script_frequency') Config['frequency'] = _0x45d707;
+    if (_0x53c542 === 'ba_script_sort') Config['sort'] = _0x4d1bb6['index'];
+    if (_0x53c542 === 'ba_script_loadMode') Config['loadMode'] = _0x4d1bb6['index'];
     setData('scriptMenu', JSON['stringify'](Config));
   }
 }

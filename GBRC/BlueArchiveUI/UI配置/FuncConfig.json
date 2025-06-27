@@ -1,0 +1,19 @@
+{
+    "AutoOldTouchMode": false,
+    "FixArrayList": true,
+    "BAArrayList": true,
+    "CustomArrayListText": [
+        [
+            "BlueArchiveUI",
+            "[时间]",
+            "用户: [名称]"
+        ]
+    ],
+    "AutoDayNight": false,
+    "DayTime": [
+        8,
+        20
+    ],
+    "EnterWelcome": true,
+    "ShowAccountUI": true
+}
